@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\company\domain\Company" table="t_backoffice_companies">
+        <id name="id" type="company_id" column="Id"/>
+        <embedded name="type" class="CompanyType" use-column-prefix="false"/>
+        <embedded name="businessId" class="CompanyBusinessId" use-column-prefix="false"/>
+        <embedded name="folio" class="CompanyFolio" use-column-prefix="false"/>
+        <embedded name="fatherId" class="CompanyFatherId" use-column-prefix="false"/>
+        <embedded name="fiscalPersonType" class="CompanyFiscalPersonType" use-column-prefix="false"/>
+        <embedded name="fiscalName" class="CompanyFiscalName" use-column-prefix="false"/>
+        <embedded name="tradeName" class="CompanyTradeName" use-column-prefix="false"/>
+        <embedded name="rfc" class="CompanyRfc" use-column-prefix="false"/>
+        <embedded name="postalAddress" class="CompanyPostalAddress" use-column-prefix="false"/>
+        <embedded name="phoneNumbers" class="CompanyPhoneNumbers" use-column-prefix="false"/>
+        <embedded name="logo" class="CompanyLogo" use-column-prefix="false"/>
+        <embedded name="slug" class="CompanySlug" use-column-prefix="false"/>
+        <embedded name="balance" class="CompanyBalance" use-column-prefix="false"/>
+        <embedded name="statusId" class="CompanyStatusId" use-column-prefix="false"/>
+        <embedded name="registerStep" class="CompanyRegisterStep" use-column-prefix="false"/>
+        <embedded name="updatedByUser" class="CompanyUpdatedByUser" use-column-prefix="false"/>
+        <embedded name="updateDate" class="CompanyUpdateDate" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="CompanyCreatedByUser" use-column-prefix="false"/>
+        <embedded name="createDate" class="CompanyCreateDate" use-column-prefix="false"/>
+        <embedded name="active" class="CompanyActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

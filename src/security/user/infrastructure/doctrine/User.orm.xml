@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\security\user\domain\User" table="t_users">
+        <id name="id" type="user_id" column="Id"/>
+        <embedded name="profile" class="UserProfile" use-column-prefix="false"/>
+        <embedded name="name" class="UserName" use-column-prefix="false"/>
+        <embedded name="lastname" class="UserLastname" use-column-prefix="false"/>
+        <embedded name="phone" class="UserPhone" use-column-prefix="false"/>
+        <field name="email" type="user_email" column="Email"/>
+        <embedded name="password" class="UserPassword" use-column-prefix="false"/>
+        <embedded name="stpAccountId" class="UserStpAccountId" use-column-prefix="false"/>
+        <embedded name="businessId" class="UserBusinessId" use-column-prefix="false"/>
+        <embedded name="register" class="UserRegister" use-column-prefix="false"/>
+        <embedded name="active" class="UserActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

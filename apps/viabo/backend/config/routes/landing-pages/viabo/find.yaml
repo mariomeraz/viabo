@@ -1,0 +1,4 @@
+viabo-web:
+  path: "/"
+  controller: Viabo\Backend\Controller\landingPages\viabo\ViewController
+  methods: GET

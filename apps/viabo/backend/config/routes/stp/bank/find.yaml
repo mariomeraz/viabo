@@ -1,0 +1,4 @@
+find-banks:
+  path: '/api/spei/banks'
+  controller: Viabo\Backend\Controller\stp\bank\find\BanksFinderController
+  methods: GET

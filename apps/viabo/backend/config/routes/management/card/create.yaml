@@ -1,0 +1,9 @@
+card-create:
+  path: '/api/card/new'
+  controller: Viabo\Backend\Controller\management\card\CardCreatorController
+  methods: POST
+
+create-cards-outside:
+  path: '/api/cards/new/outside'
+  controller: Viabo\Backend\Controller\management\card\CardsCreatorOutsideController
+  methods: POST

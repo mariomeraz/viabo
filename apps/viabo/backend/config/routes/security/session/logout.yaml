@@ -1,0 +1,4 @@
+user-logout:
+  path: '/api/logout'
+  controller: Viabo\Backend\Controller\security\session\LogoutController
+  methods: POST

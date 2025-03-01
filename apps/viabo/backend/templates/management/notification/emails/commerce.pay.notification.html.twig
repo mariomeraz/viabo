@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notificación de Viabo</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        td {
+            padding-left: 5px;
+            text-align: left;
+        }
+
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body style="font-family: Arial,Helvetica,sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color:white">
+<div style="margin: 0 auto;
+            max-width: 500px;
+            padding: 20px;
+            box-shadow: 0 1px 20px rgb(0,0,0.1);
+            border-bottom: 10px solid #4715B2;
+            background-color:black;">
+    <table>
+        <tr>
+            <td>
+                <img src="https://viabo.com/img/logo.png" alt="Logo viabo">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="	font-size: 20px;
+      		font-weight:bold;
+       		text-align: center;text-transform:capitalize;color:white">¡Recibiste un Enlace de Cobro de Viabo Pay!</p>
+            </td>
+        </tr>
+    </table>
+    <table></table>
+    <table>
+        <thead>
+        <tr>
+            <td>
+                <p style="  font-size: 18px;
+      		font-weight:bold;
+       		text-align: left;color:white"> Estimado {{fullName}}: </p>
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="align-items: center;vertical-align: middle;border-bottom-style: groove;">
+            <td>
+                <p>Queremos informarte que has recibido un enlace de cobro a través de nuestro servicio de Viabo Pay.</p>
+            </td>
+        </tr>
+        <tr style="align-items: center;vertical-align: middle;border-bottom-style: groove;">
+            <td>
+                <h3>Detalles del Enlace de Cobro:</h3>
+                <p style="font-size: 14px;
+                	text-align: center;
+      		font-weight:bold;
+       		;color:white"><strong>Enlace:</strong> <a href="{{ url }}">Ver Enlace De Pago</a></p>
+                <p style="font-size: 14px;
+                	text-align: center;
+      		font-weight:bold;
+       		;color:white"><strong>Monto:</strong> ${{ amount }} MXN</p>
+                <p style="font-size: 14px;
+                	text-align: center;
+      		font-weight:bold;
+       		;color:white"><strong>Descripción:</strong> {{ description }}</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table>
+        <tr>
+            <td style="	font-size: 12px;
+      		text-align: center;
+      		color:white;
+      		opacity:0.5;
+      		padding:0;">
+                <p>Gracias por no responder este correo</p>
+                <p>Dudas o aclaraciones dirigirse al área correspondiente de la empresa.</p>
+                <p style="font-size: 9px;">
+                    Viabo Pay toma en serio la seguridad de tus datos y emplea
+                    medidas de protección de vanguardia para resguardar tu información personal y financiera.
+                    Para más detalles sobre nuestra política de seguridad y privacidad, por favor visita
+                    {{ privacityUrl }}.</p>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

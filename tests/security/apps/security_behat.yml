@@ -1,0 +1,34 @@
+security_behat:
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      kernel:
+        class: Viabo\Backend\ViaboKernel
+        environment: ~
+      bootstrap: apps/bootstrap.php
+    Behat\MinkExtension:
+      sessions:
+        symfony:
+          symfony: ~
+      base_url: ''
+
+  suites:
+    health_check:
+      paths: [ tests/security/apps/healthCheck ]
+      contexts:
+        - Viabo\Tests\shared\infrastructure\behat\VariablesContext
+        - Viabo\Tests\shared\infrastructure\behat\APIContext
+    login:
+      paths: [ tests/security/apps/session ]
+      contexts:
+        - Viabo\Tests\shared\infrastructure\behat\VariablesContext
+        - Viabo\Tests\shared\infrastructure\behat\APIContext
+    profile:
+      paths: [ tests/security/apps/profile ]
+      contexts:
+        - Viabo\Tests\shared\infrastructure\behat\VariablesContext
+        - Viabo\Tests\shared\infrastructure\behat\APIContext
+    user:
+      paths: [ tests/security/apps/user ]
+      contexts:
+        - Viabo\Tests\shared\infrastructure\behat\VariablesContext
+        - Viabo\Tests\shared\infrastructure\behat\APIContext

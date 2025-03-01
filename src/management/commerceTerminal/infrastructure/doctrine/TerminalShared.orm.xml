@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\commerceTerminal\domain\TerminalShared" table="t_management_commerces_terminals_shared">
+        <embedded name="id" class="TerminalSharedId" use-column-prefix="false"/>
+        <field name="terminalId" type="terminal_id" column="TerminalId"/>
+        <field name="commerceId" type="terminal_commerce_id" column="CommerceId"/>
+    </entity>
+
+</doctrine-mapping>

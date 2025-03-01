@@ -1,0 +1,35 @@
+update-user-data-by-stock-cards:
+  path: '/api/card-owner/data/update'
+  controller: Viabo\Backend\Controller\security\user\update\CardOwnerDataUpdaterController
+  methods: PUT
+
+reset-password-user-by-card-owner:
+  path: '/api/card-owner/password/reset/{userId}'
+  controller: Viabo\Backend\Controller\security\user\update\CardOwnerPasswordUpdaterController
+  methods: PUT
+
+reset-password-user:
+  path: '/api/user/password/reset'
+  controller: Viabo\Backend\Controller\security\user\update\UserPasswordUpdaterController
+  methods: PUT
+
+reset-user-password-by-url:
+  path: '/api/user/password/reset/{userId}'
+  controller: Viabo\Backend\Controller\security\user\update\UpdateUserPasswordByUrlController
+  methods: GET
+
+
+update-user-data:
+  path: '/api/user/update-data'
+  controller: Viabo\Backend\Controller\security\user\update\UserUpdaterController
+  methods: PUT
+
+update-user-data-by-admin:
+  path: '/api/user/admin/update-data'
+  controller: Viabo\Backend\Controller\security\user\update\UserUpdaterByAdminController
+  methods: PUT
+
+update-user-active-status:
+  path: '/api/user/update-active'
+  controller: Viabo\Backend\Controller\security\user\update\UserActiveStatusUpdaterController
+  methods: PUT

@@ -1,0 +1,62 @@
+###> IDES ###
+/.idea/
+###< IDES ###
+
+###> composer ###
+/vendor/
+/composer.lock
+###< composer ###
+
+###> Files ###
+/.env.local
+/.phpunit.result.cache
+/apps/viabo/backend/config/jwt/private.pem
+/apps/viabo/backend/config/jwt/public.pem
+apps/viabo/backend/public/assets
+apps/viabo/backend/public/landingPage
+/apps/viabo/backend/public/.htaccess
+apps/viabo/backend/public/storage
+/apps/viabo/backend/public/php.ini
+/apps/viabo/backend/public/.user.ini
+/apps/viabo/backend/public/production_images
+###< Files ###
+
+###> Symfony ###
+/apps/viabo/backend/var/
+###< Symfony ###
+
+###> Logs ###
+/apps/viabo/frontend/logs
+/apps/viabo/frontend/*.log
+/apps/viabo/frontend/npm-debug.log*
+/apps/viabo/frontend/yarn-debug.log*
+/apps/viabo/frontend/yarn-error.log*
+/apps/viabo/frontend/pnpm-debug.log*
+/apps/viabo/frontend/lerna-debug.log*
+
+/apps/viabo/frontend/node_modules
+/apps/viabo/frontend/dist
+/apps/viabo/frontend/dist-ssr
+/apps/viabo/frontend/*.local
+/apps/viabo/frontend/pnpm-lock.yaml
+/apps/viabo/frontend/test-results/
+/apps/viabo/frontend/playwright-report/
+/apps/viabo/frontend/blob-report/
+/apps/viabo/frontend/playwright/.cache/
+/apps/viabo/backend/log/
+###< Logs ###
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+
+

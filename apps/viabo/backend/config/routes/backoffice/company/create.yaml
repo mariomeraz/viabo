@@ -1,0 +1,9 @@
+informal-commerce-create:
+  path: '/api/informal-commerce/new'
+  controller: Viabo\Backend\Controller\backoffice\company\create\InformalCommerceCreatorController
+  methods: POST
+
+create-company-by-admin-stp:
+  path: '/api/backoffice/company/new'
+  controller: Viabo\Backend\Controller\backoffice\company\create\CompanyCreatorControllerByAdminStp
+  methods: POST

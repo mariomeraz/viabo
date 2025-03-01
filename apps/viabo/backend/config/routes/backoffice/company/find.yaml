@@ -1,0 +1,34 @@
+find-company-by-register-of-outside:
+  path: '/api/commerce/legal-representative'
+  controller: Viabo\Backend\Controller\backoffice\company\CompanyFinderByUserController
+  methods: GET
+
+finder-companies:
+  path: '/api/commerces'
+  controller: Viabo\Backend\Controller\backoffice\company\find\CompaniesFinderController
+  methods: GET
+
+finder-commerce-affiliates:
+  path: '/api/commerces/affiliates'
+  controller: Viabo\Backend\Controller\backoffice\company\CommerceAffiliatesFinderController
+  methods: GET
+
+finder-commerce:
+  path: '/api/commerce/{commerceId}'
+  controller: Viabo\Backend\Controller\backoffice\company\CommerceFinderController
+  methods: GET
+
+find-commerce-slug:
+  path: "/api/commerce-slug/{slug}"
+  controller: Viabo\Backend\Controller\backoffice\company\CommerceSlugFinderController
+  methods: GET
+
+finder-company-by-service-stp:
+  path: '/api/backoffice/company/{company}'
+  controller: Viabo\Backend\Controller\backoffice\company\find\CompanyFinderController
+  methods: GET
+
+find-card-holders:
+  path: '/api/company/card-holders'
+  controller: Viabo\Backend\Controller\backoffice\company\find\CardHoldersFinderByCompanyController
+  methods: GET

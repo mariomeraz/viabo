@@ -1,0 +1,121 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar:has(#mainMenuToggler.show) {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.menu-logo {
+  max-height: 40px;
+}
+
+@media (min-width: 768px) {
+  .credigomx {
+    position: relative;
+  }
+
+  .credigomx > img {
+    max-height: 350px;
+    bottom: 0px;
+    position: absolute;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .credigomx {
+    position: static;
+  }
+
+  .credigomx > img {
+    max-height: 350px;
+    bottom: 0px;
+    position: relative;
+  }
+}
+
+.bg-green-circles-image {
+  background: url(../images/set_section_bg.webp) no-repeat;
+  background-size: cover;
+}
+
+.require::after {
+  content: "*";
+  color: red;
+  font-weight: bold;
+}
+
+.viabo-button-inverse {
+  background-color: #000000;
+  color: #ffffff !important;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  padding: 5px 15px;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.viabo-button-inverse:hover {
+  background-color: #b9ff00;
+  color: #000000 !important;
+  border: 1px solid #000000;
+  font-weight: bold;
+  padding: 5px 15px;
+}
+
+.viabo-button-inverse[disabled] {
+  background-color: #696969;
+  color: #ffffff !important;
+  border-radius: 20px;
+  border: 1px solid #696969;
+  font-weight: bold;
+  padding: 5px 15px;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.viabo-button-inverse[disabled]:hover {
+  background-color: #696969;
+  font-weight: bold;
+  color: #ffffff !important;
+  border-radius: 20px;
+  border: 1px solid #696969;
+  padding: 5px 15px;
+}
+
+.green-text {
+  color: #b9ff00;
+}
+
+.check-icons {
+  height: 1.5rem;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.portfolio-line {
+  height: 50px;
+  width: 1px;
+  border: none;
+  border-left: 2px solid hsla(200, 10%, 50%, 100);
+}

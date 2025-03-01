@@ -1,0 +1,4 @@
+update-ticket-status:
+  path: '/api/tickets/ticket/{ticketId}/close'
+  controller: Viabo\Backend\Controller\tickets\ticket\update\CloseTicketController
+  methods: PUT

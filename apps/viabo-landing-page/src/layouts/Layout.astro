@@ -1,0 +1,109 @@
+---
+import Footer from "@/components/Footer.astro"
+import Header from "@/components/Header.astro"
+
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+const publicFolder = `${import.meta.env.PUBLIC_FOLDER}`
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href={`${publicFolder}/favicon.svg`} />
+		<meta
+			content="Sistema de Soluciones Tecnologicas de Pago para Comercios y Empresas"
+			name="description"
+		/>
+		<meta
+			content="viabo,tarjeta de credito,viabo pay,viabo card,visa,dashboard,admin,empresa,sistema de pago,spei,viabo spei"
+			name="keywords"
+		/>
+		<meta content="Viabo" name="author" />
+		<meta property="og:title" content="Viabo" />
+		<meta property="og:type" content="Website" />
+		<meta property="og:url" content="https://viabo.com" />
+		<meta
+			property="og:description"
+			content="Sistema de Soluciones Tecnologicas de Pago para Comercios y Empresas"
+		/>
+		<meta property="og:image" content="https://viabo.com/production_images/viabo-thumbnail.jpg" />
+
+		<meta name="twitter:card" content="viabo-pay-image" />
+		<meta
+			name="twitter:description"
+			content="Sistema de Soluciones Tecnologicas de Pago para Comercios y Empresas"
+		/>
+		<meta name="twitter:image" content="https://viabo.com/production_images/viabo-thumbnail.jpg" />
+		<title>{title}</title>
+	</head>
+	<body class="relative">
+		<Header />
+		<slot />
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: only light;
+		--entry-animation: -20px;
+		--cover-animation: 20px;
+
+		--color-primary: #8100ff;
+		--color-primary-light: #c462ff;
+		--color-primary-dark: #6c24ff;
+		--color-secondary: #b9ff00;
+	}
+
+	@media (min-width: 1400px) {
+		:root {
+			--entry-animation: -100px;
+			--cover-animation: 100px;
+			box-sizing: border-box;
+		}
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		color-scheme: only light;
+		background: #fcfcfc;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		overscroll-behavior: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+	#header-nav {
+		background: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(10px);
+		animation: blur linear both;
+		animation-timeline: scroll();
+		animation-range: 0 500px;
+	}
+
+	@keyframes blur {
+		to {
+			box-shadow:
+				0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+				0px 0px 0 1px rgba(0, 0, 0, 0.3);
+			background: rgba(0, 0, 0, 0.7);
+			backdrop-filter: blur(10px);
+			color: white;
+		}
+	}
+</style>

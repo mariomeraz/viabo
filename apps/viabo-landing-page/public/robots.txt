@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Sitemap: https://viabo.com/
+Sitemap: https://qa.viabo.com/

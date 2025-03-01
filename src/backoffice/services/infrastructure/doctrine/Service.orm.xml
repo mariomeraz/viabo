@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\services\domain\Service"  table="t_business_commerces_services">
+        <embedded name="id" class="ServiceId" use-column-prefix="false"/>
+        <field name="commerceId" type="commerce_id" column="CommerceId"/>
+        <embedded name="type" class="ServiceType" use-column-prefix="false"/>
+        <embedded name="cardNumbers" class="ServiceCardNumbers" use-column-prefix="false"/>
+        <embedded name="cardUse" class="ServiceCardUse" use-column-prefix="false"/>
+        <embedded name="personalized" class="ServicePersonalized" use-column-prefix="false"/>
+        <embedded name="active" class="ServiceActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

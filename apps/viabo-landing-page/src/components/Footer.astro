@@ -1,0 +1,79 @@
+---
+import Facebook from "@/components/icons/Facebook.astro"
+import Instagram from "@/components/icons/Instagram.astro"
+import Logo from "@/components/icons/Logo.astro"
+import info from "@/data/general-info.json"
+---
+
+<footer class="bg-gray-900" id="contacto">
+	<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+		<div class="md:flex md:justify-between">
+			<div class="mb-6 md:mb-0">
+				<Logo class="w-24 text-white" />
+				<span class="text-xl text-white">Agilidad en pagos</span>
+			</div>
+			<div class="flex flex-col gap-4">
+				<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+					<ul class="text-white">
+						<li>
+							<a href="#">Soluciones</a>
+						</li>
+						<li>
+							<a href="#">Partners</a>
+						</li>
+						<li>
+							<a href="#">Contacto</a>
+						</li>
+					</ul>
+
+					<ul
+						class="flex flex-row items-center gap-x-4"
+						aria-label="redes sociales y botón para alternar tema"
+					>
+						<li>
+							<a
+								target="_blank"
+								rel="noopener"
+								aria-label="Facebook de Viabo pay | 𝗔𝗴𝗶𝗹𝗶𝗱𝗮𝗱 𝗲𝗻 𝗽𝗮𝗴𝗼𝘀. "
+								href={info.facebook}
+								class="inline-block transition hover:scale-125 hover:opacity-70"
+							>
+								<Facebook class="text-white" />
+							</a>
+						</li>
+						<li>
+							<a
+								target="_blank"
+								rel="noopener"
+								aria-label="Instagram de Viabo pay | 𝗔𝗴𝗶𝗹𝗶𝗱𝗮𝗱 𝗲𝗻 𝗽𝗮𝗴𝗼𝘀. "
+								href={info.instagram}
+								class="inline-block transition hover:scale-125 hover:opacity-70"
+							>
+								<Instagram class="text-white" />
+								<span class="sr-only">Instagram page</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr class="my-6 border-gray-700 sm:mx-auto lg:my-8" />
+		<div class="sm:flex sm:items-center sm:justify-between">
+			<span class="text-sm text-gray-400 sm:text-center">
+				&copy; {info.year}
+				<a href="/" class="hover:underline">{info.name}</a>. Todos los derechos reservados.
+			</span>
+			<div class="mt-4 flex gap-4 sm:mt-0 sm:justify-center">
+				<p class="text-white">
+					<a href="/privacy" rel="noopener" class="text-secondary" target="_blank"
+						>Aviso de Privacidad</a
+					>
+					-
+					<a href="/policies" rel="noopener" target="_blank" class="text-secondary"
+						>Terminos & Condiciones</a
+					>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>

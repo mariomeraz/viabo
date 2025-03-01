@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backofficeBusiness\business\domain\Business" table="t_backoffice_business">
+        <embedded name="id" class="BusinessId" use-column-prefix="false"/>
+        <embedded name="name" class="BusinessName" use-column-prefix="false"/>
+        <embedded name="templateFile" class="BusinessTemplateFile" use-column-prefix="false"/>
+        <embedded name="domain" class="BusinessDomain" use-column-prefix="false"/>
+        <embedded name="active" class="BusinessActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

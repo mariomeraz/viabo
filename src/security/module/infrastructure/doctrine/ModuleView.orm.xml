@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\security\module\domain\ModuleView" read-only="true" table="v_modules">
+        <id name="id" type="integer" column="Id"/>
+        <field name="categoryId" column="CategoryId"/>
+        <field name="subModuleId" column="SubModuleId"/>
+        <field name="serviceId" column="ServiceId"/>
+        <field name="categoryName" column="CategoryName"/>
+        <field name="categoryOrder" column="CategoryOrder"/>
+        <field name="moduleOrder" column="Order"/>
+        <field name="moduleName" column="Name"/>
+        <field name="path" column="Path"/>
+        <field name="icon" column="Icon"/>
+        <field name="moduleActions" column="ModuleActions"/>
+        <field name="active" column="Active"/>
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\users\domain\CompanyUser" table="t_backoffice_companies_and_users">
+        <embedded name="userId" class="CompanyUserId" use-column-prefix="false"/>
+        <id name="companyId" type="company_id" column="CompanyId"/>
+        <embedded name="profileId" class="CompanyUserProfileId" use-column-prefix="false"/>
+        <embedded name="name" class="CompanyUserName" use-column-prefix="false"/>
+        <embedded name="lastname" class="CompanyUserLastname" use-column-prefix="false"/>
+        <embedded name="email" class="CompanyUserEmail" use-column-prefix="false"/>
+        <embedded name="createDate" class="CompanyUserCreateDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

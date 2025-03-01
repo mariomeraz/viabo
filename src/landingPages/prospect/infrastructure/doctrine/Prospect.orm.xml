@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\landingPages\prospect\domain\Prospect" table="t_landing_pages_prospects">
+        <embedded name="id" class="ProspectId" use-column-prefix="false"/>
+        <embedded name="businessType" class="ProspectBusinessType" use-column-prefix="false"/>
+        <embedded name="name" class="ProspectName" use-column-prefix="false"/>
+        <embedded name="lastname" class="ProspectLastname" use-column-prefix="false"/>
+        <embedded name="company" class="ProspectCompany" use-column-prefix="false"/>
+        <embedded name="email" class="ProspectEmail" use-column-prefix="false"/>
+        <embedded name="phone" class="ProspectPhone" use-column-prefix="false"/>
+        <embedded name="contactMethod" class="ProspectContactMethod" use-column-prefix="false"/>
+        <embedded name="createDate" class="ProspectCreateDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

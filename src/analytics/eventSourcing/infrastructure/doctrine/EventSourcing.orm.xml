@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\analytics\eventSourcing\domain\EventSourcing" table="t_event_sourcing">
+        <embedded name="id" class="EventSourcingId" use-column-prefix="false" />
+        <embedded name="type" class="EventSourcingType" use-column-prefix="false" />
+        <embedded name="aggregateId" class="EventSourcingAggregateId" use-column-prefix="false" />
+        <embedded name="body" class="EventSourcingBody" use-column-prefix="false" />
+        <embedded name="occurredOn" class="EventSourcingOccurredOn" use-column-prefix="false" />
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\projection\domain\CompanyProjection" table="t_backoffice_companies_projection">
+        <id name="id" column="Id"/>
+        <field name="type" column="Type"/>
+        <field name="typeName" column="TypeName"/>
+        <field name="businessId" column="BusinessId"/>
+        <field name="folio" column="Folio"/>
+        <field name="fatherId" column="CompanyId"/>
+        <field name="fiscalPersonType" column="FiscalPersonType"/>
+        <field name="fiscalName" column="FiscalName"/>
+        <field name="tradeName" column="TradeName"/>
+        <field name="rfc" column="Rfc"/>
+        <field name="postalAddress" column="PostalAddress"/>
+        <field name="phoneNumbers" column="PhoneNumbers"/>
+        <field name="logo" column="Logo"/>
+        <field name="slug" column="Slug"/>
+        <field name="balance" column="Balance"/>
+        <field name="statusId" column="StatusId"/>
+        <field name="statusName" column="StatusName"/>
+        <field name="registerStep" column="RegisterStep"/>
+        <field name="users" column="Users"/>
+        <field name="services" column="Services"/>
+        <field name="documents" column="Documents"/>
+        <field name="commissions" column="Commissions"/>
+        <field name="costCenters" column="CostCenters"/>
+        <field name="updatedByUser" column="UpdatedByUser"/>
+        <field name="updateDate" column="UpdateDate"/>
+        <field name="createdByUser" column="CreatedByUser"/>
+        <field name="createDate" column="CreateDate"/>
+        <field name="active" column="Active"/>
+    </entity>
+
+</doctrine-mapping>

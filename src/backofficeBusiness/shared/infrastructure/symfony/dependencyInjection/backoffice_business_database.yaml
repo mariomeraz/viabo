@@ -1,0 +1,22 @@
+services:
+  Doctrine\ORM\EntityManager $BusinessEntityManager: '@business_doctrine_repository'
+
+  # Configuration
+  business_doctrine_repository:
+    class: Viabo\shared\infrastructure\doctrine\DoctrineRepository
+    factory: [ Viabo\backofficeBusiness\shared\infrastructure\doctrine\BusinessEntityManagerFactory, create ]
+    arguments:
+      - driver: '%env(VIABO_DATABASE_DRIVER)%'
+        host: '%env(VIABO_DATABASE_HOST)%'
+        port: '%env(VIABO_DATABASE_PORT)%'
+        dbname: '%env(VIABO_DATABASE_NAME)%'
+        user: '%env(VIABO_DATABASE_USER)%'
+        password: '%env(VIABO_DATABASE_PASSWORD)%'
+        charset: 'utf8'
+        default_table_options:
+          charset: 'utf8'
+          collate: 'utf8_general_ci'
+      - '%env(APP_ENV)%'
+    tags:
+      - { name: bc.database_connection }
+    public: true

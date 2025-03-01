@@ -1,0 +1,39 @@
+find-stock-cards:
+  path: '/api/cards/stock'
+  controller: Viabo\Backend\Controller\management\card\StockCardsFinderController
+  methods: GET
+
+find-enabled-cards-of-commerce:
+  path: '/api/enabled-cards/commerce'
+  controller: Viabo\Backend\Controller\management\card\EnabledCommerceCardsFinderController
+  methods: GET
+
+find-card-stock-of-commerce:
+  path: '/api/cards/commerce'
+  controller: Viabo\Backend\Controller\management\card\CommerceCardStockFinderController
+  methods: GET
+
+find-card-information:
+  path: '/api/card/information/{cardId}'
+  controller: Viabo\Backend\Controller\management\card\CardInformationFinderController
+  methods: GET
+
+find-card-demo-information:
+  path: '/api/card-demo/information/{cardNumber}'
+  controller: Viabo\Backend\Controller\management\card\CardDemoInformationFinderController
+  methods: GET
+
+find-main-card-information:
+  path: '/api/main-card/information'
+  controller: Viabo\Backend\Controller\management\card\MainCardInformationFinderController
+  methods: GET
+
+find-payment-processor-of-commerce:
+  path: '/api/payment-processors/of/commerce'
+  controller: Viabo\Backend\Controller\management\card\PaymentProcessorsCommerceFinderController
+  methods: GET
+
+find-main-cards:
+  path: '/api/main-cards/information'
+  controller: Viabo\Backend\Controller\management\card\MainCardsFinderController
+  methods: GET

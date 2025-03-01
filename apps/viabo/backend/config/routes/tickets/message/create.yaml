@@ -1,0 +1,4 @@
+create-message:
+  path: '/api/tickets/message/new'
+  controller: Viabo\Backend\Controller\tickets\message\create\MessageCreatorController
+  methods: POST

@@ -1,0 +1,14 @@
+finder-commerce-pay:
+  path: "/api/commerces/pay/{urlCode}"
+  controller: Viabo\Backend\Controller\management\terminalTransaction\CommercePayFinderController
+  methods: GET
+
+finder-commerce-pay-all-transactions:
+  path: "/api/commerces-pay/transactions/all"
+  controller: Viabo\Backend\Controller\management\terminalTransaction\TerminalsTransactionFinderController
+  methods: GET
+
+find-transactions-of-terminals-shared:
+  path: "/api/terminals/shared/transactions"
+  controller: Viabo\Backend\Controller\management\terminalTransaction\SharedTerminalsTransactionFinderController
+  methods: GET

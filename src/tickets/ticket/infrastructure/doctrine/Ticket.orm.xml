@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\tickets\ticket\domain\Ticket" table="t_tickets">
+        <embedded name="id" class="TicketId" use-column-prefix="false"/>
+        <embedded name="statusId" class="TicketStatusId" use-column-prefix="false"/>
+        <embedded name="supportReasonId" class="TicketSupportReasonId" use-column-prefix="false"/>
+        <embedded name="applicantProfileId" class="TicketApplicantProfileId" use-column-prefix="false"/>
+        <embedded name="assignedProfileId" class="TicketAssignedProfileId" use-column-prefix="false"/>
+        <embedded name="description" class="TicketDescription" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="TicketCreatedByUser" use-column-prefix="false"/>
+        <embedded name="createDate" class="TicketCreateDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,19 @@
+transaction-process-payments:
+  path: '/api/spei/transaction/process-payments'
+  controller: Viabo\Backend\Controller\stp\transaction\create\SpeiPaymentProcessorController
+  methods: POST
+
+register-transaction-spei-in:
+  path: "/api/spei/speiin-transaction/register"
+  controller: Viabo\Backend\Controller\stp\transaction\create\SpeiInTransactionController
+  methods: GET
+
+register-transaction-spei-out:
+  path: "/api/spei/speiout-transaction/register"
+  controller: Viabo\Backend\Controller\stp\transaction\create\SpeiOutTransactionController
+  methods: GET
+
+register-transaction-spei-out-and-in:
+    path: "/api/stp/spei-transactions/register"
+    controller: Viabo\Backend\Controller\stp\transaction\create\SpeiTransactionsController
+    methods: GET

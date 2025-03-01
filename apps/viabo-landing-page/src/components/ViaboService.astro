@@ -1,0 +1,29 @@
+---
+import Logo from "@/components/icons/Logo.astro"
+import { twMerge } from "tailwind-merge"
+
+interface Props {
+	name: string
+	logo: string
+	acronym: string
+	class?: string
+}
+
+const { name, logo, acronym, class: className } = Astro.props
+---
+
+<div
+	class:list={twMerge(
+		"text-primary flex flex-col items-center justify-center gap-5 font-medium",
+		className
+	)}
+>
+	<img src={logo} alt={name} />
+	<div class="flex items-center justify-center gap-1">
+		<span>
+			<Logo class="w-12" />
+		</span>
+
+		<span class="text-primary"></span>{acronym}
+	</div>
+</div>

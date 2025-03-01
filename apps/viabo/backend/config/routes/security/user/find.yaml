@@ -1,0 +1,14 @@
+find-user-by-company-register:
+  path: '/api/legal-representative/verificate'
+  controller: Viabo\Backend\Controller\security\user\find\LegalRepresentativeFinderController
+  methods: GET
+
+find-users-of-profile-administrators-of-companies:
+  path: '/api/security/users/administrators-of-companies'
+  controller: Viabo\Backend\Controller\security\user\find\AdministratorsOfCompaniesFinderController
+  methods: GET
+
+find-users-of-profile-administrators-of-cost-centers:
+  path: '/api/security/users/administrators-of-cost-centers'
+  controller: Viabo\Backend\Controller\security\user\find\AdministratorsOfCostCenterFinderController
+  methods: GET

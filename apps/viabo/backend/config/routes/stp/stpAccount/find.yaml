@@ -1,0 +1,9 @@
+find-spei-accounts:
+  path: '/api/spei/accounts'
+  controller: Viabo\Backend\Controller\stp\stpAccount\find\AccountsFinderController
+  methods: GET
+
+find-concentrator:
+  path: '/api/spei/concentrator'
+  controller: Viabo\Backend\Controller\stp\stpAccount\find\StpAccountFinderByBusinessController
+  methods: GET

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\tickets\message\domain\MessageFile" table="t_tickets_message_files">
+        <embedded name="id" class="MessageFileId" use-column-prefix="false"/>
+        <embedded name="messageId" class="MessageFileReferenceId" use-column-prefix="false"/>
+        <embedded name="storagePath" class="MessageFileStoragePath" use-column-prefix="false"/>
+        <embedded name="createDate" class="MessageFileCreateDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

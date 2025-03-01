@@ -1,0 +1,4 @@
+code-verification:
+  path: '/api/code/verificate'
+  controller: Viabo\Backend\Controller\security\code\delete\CodeCheckerController
+  methods: POST

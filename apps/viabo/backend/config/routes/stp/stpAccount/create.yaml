@@ -1,0 +1,4 @@
+register-balance-spei:
+  path: "/api/spei/account-balance/register"
+  controller: Viabo\Backend\Controller\stp\stpAccount\update\UpdateStpAccountBalanceController
+  methods: GET

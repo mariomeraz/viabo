@@ -1,0 +1,4 @@
+user-login:
+  path: '/api/login'
+  controller: Viabo\Backend\Controller\security\user\login\LoginController
+  methods: POST

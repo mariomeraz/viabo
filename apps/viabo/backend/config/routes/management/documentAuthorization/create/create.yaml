@@ -1,0 +1,4 @@
+commerce-document-authorize:
+  path: '/api/commerce/document/authorize'
+  controller: Viabo\Backend\Controller\management\documentAuthorization\DocumentAuthorizerController
+  methods: POST

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\security\authenticatorFactor\domain\AuthenticatorFactor" table="t_security_authenticator_factors">
+        <embedded name="id" class="AuthenticatorFactorId" use-column-prefix="false"/>
+        <embedded name="userId" class="AuthenticatorFactorUserId" use-column-prefix="false"/>
+        <embedded name="provider" class="AuthenticatorFactorProvider" use-column-prefix="false"/>
+        <embedded name="secretKey" class="AuthenticatorFactorSecretKey" use-column-prefix="false"/>
+        <embedded name="recoveryKeys" class="AuthenticatorFactorRecoveryKeys" use-column-prefix="false"/>
+        <embedded name="createDate" class="AuthenticatorFactorCreateDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

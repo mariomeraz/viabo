@@ -1,0 +1,10 @@
+card-messages-send:
+  path: '/api/cards/send/message'
+  controller: Viabo\Backend\Controller\management\notifications\CardMessagesSendController
+  methods: POST
+
+card-message-spei-key-send:
+  path: '/api/card/send/spei-key'
+  controller: Viabo\Backend\Controller\management\notifications\CardKeySPEISendController
+  methods: POST
+

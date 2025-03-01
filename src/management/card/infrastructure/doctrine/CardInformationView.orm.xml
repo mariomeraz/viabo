@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\card\domain\CardInformationView" table="v_management_cards_information">
+        <id name="id" column="Id"/>
+        <field name="commerceId" column="CommerceId"/>
+        <field name="main" column="Main"/>
+        <field name="cardNumber" column="Number"/>
+        <field name="cardSpei" column="Spei"/>
+        <field name="cardId" column="CardId"/>
+        <field name="userId" column="UserId"/>
+        <field name="userName" column="UserName"/>
+        <field name="password" column="Password"/>
+        <field name="clientKey" column="ClientKey"/>
+        <field name="paymentProcessorId" column="PaymentProcessorId"/>
+        <field name="paymentProcessor" column="PaymentProcessor"/>
+        <field name="active" column="Active"/>
+    </entity>
+
+</doctrine-mapping>

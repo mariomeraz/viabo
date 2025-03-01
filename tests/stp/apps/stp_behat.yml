@@ -1,0 +1,32 @@
+stp_behat:
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      kernel:
+        class: Viabo\Backend\ViaboKernel
+        environment: ~
+      bootstrap: apps/bootstrap.php
+    Behat\MinkExtension:
+      sessions:
+        symfony:
+          symfony: ~
+      base_url: ''
+
+  suites:
+#    users:
+#      paths: [ tests/stp/apps/users ]
+#      contexts:
+#        - Viabo\Tests\shared\infrastructure\behat\VariablesContext
+#        - Viabo\Tests\shared\infrastructure\behat\APIContext
+#        - Viabo\Tests\stp\apps\context\StpContext
+#    cardCloud:
+#      paths: [ tests/stp/apps/cardCloud ]
+#      contexts:
+#        - Viabo\Tests\shared\infrastructure\behat\VariablesContext
+#        - Viabo\Tests\shared\infrastructure\behat\APIContext
+#        - Viabo\Tests\stp\apps\context\StpContext
+    transactions:
+      paths: [ tests/stp/apps/transaction ]
+      contexts:
+        - Viabo\Tests\shared\infrastructure\behat\VariablesContext
+        - Viabo\Tests\shared\infrastructure\behat\APIContext
+        - Viabo\Tests\stp\apps\context\StpContext

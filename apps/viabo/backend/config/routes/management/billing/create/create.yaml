@@ -1,0 +1,9 @@
+billing-SET:
+  path: '/api/register/pays'
+  controller: Viabo\Backend\Controller\management\billing\BillingCreatorController
+  methods: POST
+
+billing-paycash:
+  path: '/api/paycash/payment'
+  controller: Viabo\Backend\Controller\management\billing\PayCashBillingCreatorController
+  methods: POST

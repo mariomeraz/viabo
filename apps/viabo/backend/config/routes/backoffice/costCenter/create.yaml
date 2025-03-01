@@ -1,0 +1,4 @@
+create-cost-center:
+  path: '/api/backoffice/cost-center/new'
+  controller: Viabo\Backend\Controller\backoffice\costCenter\create\CostCenterCreatorController
+  methods: POST

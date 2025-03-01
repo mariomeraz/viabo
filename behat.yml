@@ -1,0 +1,6 @@
+imports:
+  - tests/security/apps/security_behat.yml
+  - tests/tickets/apps/tickets_behat.yml
+  - tests/management/apps/management_behat.yml
+  - tests/stp/apps/stp_behat.yml
+  - tests/backoffice/apps/backoffice_behat.yml

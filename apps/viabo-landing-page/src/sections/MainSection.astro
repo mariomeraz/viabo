@@ -1,0 +1,108 @@
+---
+import ViaboService from "@/components/ViaboService.astro"
+
+const imagesPath = `${import.meta.env.PUBLIC_FOLDER}images`
+---
+
+<div
+	class="relative z-10 flex h-full w-full bg-[url('/images/bg-1.svg')] bg-cover bg-no-repeat md:bg-[url('/images/bg-1.webp')] md:bg-[center_top_-15rem]"
+>
+	<section
+		class="mx-auto flex max-w-screen-lg flex-col items-start justify-between gap-10 px-10 pb-52 pt-16 md:px-0"
+	>
+		<div class="flex flex-grow flex-col items-start justify-center gap-10">
+			<div class="flex max-w-2xl animate-fade-in-up flex-col font-bold">
+				<h1
+					class="from- bg-gradient-to-br from-primary via-[#A127FF] to-primary-light bg-clip-text py-10 text-6xl text-transparent md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl"
+				>
+					agilidad en pagos
+				</h1>
+			</div>
+			<div
+				class="flex max-w-md animate-fade-in flex-col gap-10 animate-delay-500 animate-steps-modern"
+			>
+				<div class="flex flex-col">
+					<h2 class="text-xl font-semibold">Canales de pago en tiempos y a tiempo.</h2>
+					<h2 class="text-xl">
+						Controla todos tus pagos de forma ágil y segura desde una plataforma
+					</h2>
+					<h2 class="text-xl text-primary">24/7 los 365 días del año</h2>
+				</div>
+
+				<div class="animate-bouncing animate-delay-500">
+					<a
+						href="#servicios"
+						class="inline-flex min-w-48 items-center justify-center rounded-full bg-gradient-to-r from-primary-light to-primary p-2 text-xl text-white transition-all hover:scale-105 hover:from-pink-500 hover:to-primary-dark"
+					>
+						Comenzar ahora
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="mx-auto flex flex-col items-center justify-center gap-10">
+			<div class="flex flex-col items-center justify-center">
+				<h3 class="text-xl text-primary">Agilidad en pagos</h3>
+				<h4 class="text-center text-4xl font-light">Con Viabo tienes más, tienes todo.</h4>
+			</div>
+			<div
+				class="grid grid-cols-1 gap-10 divide-dashed divide-primary-light divide-opacity-25 px-10 md:grid-cols-3 md:divide-x"
+			>
+				<article class="flex flex-col items-center justify-center gap-10 border-primary-light">
+					<ViaboService
+						class="w-10"
+						acronym="pay"
+						logo={`${imagesPath}/viabo-pay-logo.svg`}
+						name="viabo-pay"
+					/>
+					<p class="max-w-xs text-center font-medium text-primary">
+						Recibe pagos con tarjeta y efectivo en tiendas
+					</p>
+					<a
+						href="#servicios"
+						id="viabo-pay"
+						class="inline-flex min-w-48 items-center justify-center rounded-full bg-gradient-to-r from-primary-light to-primary p-2 text-xl text-white transition-all hover:scale-105 hover:from-pink-500 hover:to-primary-dark"
+					>
+						Más información
+					</a>
+				</article>
+				<article class="flex flex-col items-center justify-center gap-10">
+					<ViaboService
+						class="w-8"
+						acronym="card"
+						logo={`${imagesPath}/viabo-card-logo.svg`}
+						name="viabo-card"
+					/>
+					<p class="min-h-12 w-full max-w-xs text-center font-medium text-primary">
+						Tarjetas para gastos y viáticos
+					</p>
+					<a
+						href="#servicios"
+						id="viabo-card"
+						class="inline-flex min-w-48 items-center justify-center rounded-full bg-gradient-to-r from-primary-light to-primary p-2 text-xl text-white transition-all hover:scale-105 hover:from-pink-500 hover:to-primary-dark"
+					>
+						Más información
+					</a>
+				</article>
+				<article class="flex flex-col items-center justify-center gap-10">
+					<ViaboService
+						class="w-8"
+						acronym="spei"
+						logo={`${imagesPath}/viabo-spei-logo.svg`}
+						name="viabo-spei"
+					/>
+					<p class="min-h-12 w-full max-w-xs text-center font-medium text-primary">
+						Transferencias seguras SPEI 24/7
+					</p>
+					<a
+						href="#servicios"
+						id="viabo-spei"
+						class="inline-flex min-w-48 items-center justify-center rounded-full bg-gradient-to-r from-primary-light to-primary p-2 text-xl text-white transition-all hover:scale-105 hover:from-pink-500 hover:to-primary-dark"
+					>
+						Más información
+					</a>
+				</article>
+			</div>
+		</div>
+	</section>
+</div>

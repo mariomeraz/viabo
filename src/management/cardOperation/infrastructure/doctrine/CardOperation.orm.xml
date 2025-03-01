@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\cardOperation\domain\CardOperation" table="t_management_cards_operations">
+        <embedded name="id" class="CardOperationId" use-column-prefix="false"/>
+        <embedded name="typeId" class="CardOperationTypeId" use-column-prefix="false"/>
+        <embedded name="referenceTerminal" class="CardOperationReferenceTerminal" use-column-prefix="false"/>
+        <embedded name="originCard" class="CardOperationOrigin" use-column-prefix="false"/>
+        <embedded name="originCardMain" class="CardOperationOriginMain" use-column-prefix="false"/>
+        <embedded name="destinationCard" class="CardOperationDestination" use-column-prefix="false"/>
+        <embedded name="payTransactionId" class="CardOperationPayTransactionId" use-column-prefix="false"/>
+        <embedded name="reverseTransactionId" class="CardOperationReverseTransactionId" use-column-prefix="false"/>
+        <embedded name="descriptionPay" class="CardOperationDescriptionPay" use-column-prefix="false"/>
+        <embedded name="descriptionReverse" class="CardOperationDescriptionReverse" use-column-prefix="false"/>
+        <embedded name="balance" class="CardOperationBalance" use-column-prefix="false"/>
+        <embedded name="concept" class="CardOperationConcept" use-column-prefix="false"/>
+        <embedded name="payData" class="CardOperationPayData" use-column-prefix="false"/>
+        <embedded name="reverseData" class="CardOperationReverseData" use-column-prefix="false"/>
+        <embedded name="payEmail" class="CardOperationPayEmail" use-column-prefix="false"/>
+        <embedded name="reverseEmail" class="CardOperationReverseEmail" use-column-prefix="false"/>
+        <field name="clientKey" type="card_client_key" column="ClientKey" />
+        <embedded name="registerDate" class="CardOperationRegisterDate" use-column-prefix="false"/>
+        <embedded name="active" class="CardOperationActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

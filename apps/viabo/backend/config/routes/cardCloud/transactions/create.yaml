@@ -1,0 +1,9 @@
+create-card-cloud-transfer:
+  path: '/api/cardCloud/transfer'
+  controller: Viabo\Backend\Controller\cardCloud\transactions\create\CardCloudTransferCreatorController
+  methods: POST
+
+create-card-cloud-transfers:
+  path: '/api/cardCloud/transfers-from-file'
+  controller: Viabo\Backend\Controller\cardCloud\transactions\create\CardCloudTransfersFromFileCreatorController
+  methods: POST

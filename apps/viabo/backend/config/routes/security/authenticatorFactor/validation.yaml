@@ -1,0 +1,4 @@
+validate-google-authenticator:
+  path: "/api/security/google-authenticator/validate"
+  controller: Viabo\Backend\Controller\security\authenticatorFactor\validation\GoogleAuthenticatorValidatorController
+  methods: POST

@@ -1,0 +1,4 @@
+create-ticket:
+  path: '/api/tickets/ticket/new'
+  controller: Viabo\Backend\Controller\tickets\ticket\create\TicketCreatorController
+  methods: POST

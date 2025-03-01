@@ -1,0 +1,4 @@
+code-verification-resend:
+  path: '/api/code/verification/resend'
+  controller: Viabo\Backend\Controller\security\code\create\CodeCreatorController
+  methods: POST

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\stp\stpAccount\domain\StpAccount" table="t_spei_stp_accounts">
+        <embedded name="id" class="StpAccountId" use-column-prefix="false"/>
+        <embedded name="businessId" class="StpAccountBusinessId" use-column-prefix="false"/>
+        <embedded name="number" class="StpAccountNumber" use-column-prefix="false"/>
+        <embedded name="acronym" class="StpAccountAcronym" use-column-prefix="false"/>
+        <embedded name="company" class="StpAccountCompany" use-column-prefix="false"/>
+        <embedded name="key" class="StpAccountKey" use-column-prefix="false"/>
+        <embedded name="url" class="StpAccountUrl" use-column-prefix="false"/>
+        <embedded name="pendingCharges" class="StpAccountPendingCharges" use-column-prefix="false"/>
+        <embedded name="balance" class="StpAccountBalance" use-column-prefix="false"/>
+        <embedded name="balanceDate" class="StpAccountBalanceDate" use-column-prefix="false"/>
+        <embedded name="active" class="StpAccountActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

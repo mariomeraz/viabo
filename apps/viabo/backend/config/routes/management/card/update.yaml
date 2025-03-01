@@ -1,0 +1,24 @@
+assign-card-to-commerce:
+  path: '/api/card/assign/commerce'
+  controller: Viabo\Backend\Controller\management\card\CardAssignerControllerInCommerce
+  methods: POST
+
+assign-cards-to-commerce:
+  path: '/api/cards/assign/commerce'
+  controller: Viabo\Backend\Controller\management\card\CardsAssignerControllerInCommerce
+  methods: POST
+
+update-card-status:
+  path: '/api/card/{cardId}/block/{blockStatus}'
+  controller: Viabo\Backend\Controller\management\card\CardBlockStatusUpdaterController
+  methods: PUT
+
+assign-card-to-user:
+  path: '/api/assign/commerce-card/to/user'
+  controller: Viabo\Backend\Controller\management\card\CommerceCardUserUpdaterController
+  methods: PUT
+
+assign-card-to-user-in-commerce-demo:
+  path: '/api/assign/commerce-demo-card/to/user'
+  controller: Viabo\Backend\Controller\management\card\CommerceDemoCardUserUpdaterController
+  methods: PUT

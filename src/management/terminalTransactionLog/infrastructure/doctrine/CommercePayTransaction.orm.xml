@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\terminalTransactionLog\domain\CommercePayTransaction" table="t_management_commerces_pay_transaction">
+        <embedded name="id" class="CommercePayTransactionId" use-column-prefix="false"/>
+        <field name="commercePayId" type="commerce_pay_id" column="CommercePayId"/>
+        <embedded name="statusId" class="CommercePayTransactionStatusId" use-column-prefix="false"/>
+        <embedded name="apiMessage" class="CommercePayTransactionAPIMessage" use-column-prefix="false"/>
+        <embedded name="apiCode" class="CommercePayTransactionAPICode" use-column-prefix="false"/>
+        <embedded name="apiData" class="CommercePayTransactionAPIData" use-column-prefix="false"/>
+        <embedded name="typeId" class="CommercePayTransactionTypeId" use-column-prefix="false"/>
+        <embedded name="date" class="CommercePayTransactionDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

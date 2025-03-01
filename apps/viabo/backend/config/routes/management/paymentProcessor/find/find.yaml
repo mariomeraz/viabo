@@ -1,0 +1,4 @@
+payment-processor-find:
+  path: '/api/payment-processors'
+  controller: Viabo\Backend\Controller\management\paymentProcessor\PaymentProcessorsFinderController
+  methods: GET

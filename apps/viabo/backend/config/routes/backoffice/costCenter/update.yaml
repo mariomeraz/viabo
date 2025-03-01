@@ -1,0 +1,4 @@
+update-cost-center:
+  path: '/api/backoffice/cost-center/update'
+  controller: Viabo\Backend\Controller\backoffice\costCenter\update\CostCenterUpdaterController
+  methods: PUT

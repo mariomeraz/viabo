@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\terminalTransaction\domain\CommercePay" table="t_management_commerces_pay">
+        <id name="id" type="commerce_pay_id" column="Id"/>
+        <embedded name="commerceId" class="CommercePayCommerceId" use-column-prefix="false"/>
+        <embedded name="terminalId" class="CommercePayTerminalId" use-column-prefix="false"/>
+        <embedded name="reference" class="CommercePayReference" use-column-prefix="false"/>
+        <embedded name="clientName" class="CommercePayClientName" use-column-prefix="false"/>
+        <embedded name="email" class="CommercePayEmail" use-column-prefix="false"/>
+        <embedded name="phone" class="CommercePayPhone" use-column-prefix="false"/>
+        <embedded name="description" class="CommercePayDescription" use-column-prefix="false"/>
+        <embedded name="amount" class="CommercePayAmount" use-column-prefix="false"/>
+        <embedded name="urlCode" class="CommercePayUrlCode" use-column-prefix="false"/>
+        <embedded name="statusId" class="CommercePayStatusId" use-column-prefix="false"/>
+        <embedded name="liquidationStatusId" class="CommercePayLiquidationStatusId" use-column-prefix="false"/>
+        <embedded name="apiAuthCode" class="CommercePayApiAuthCode" use-column-prefix="false"/>
+        <embedded name="apiReferenceNumber" class="CommercePayApiReferenceNumber" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="CommercePayCreatedByUser" use-column-prefix="false"/>
+        <embedded name="registerDate" class="CommercePayRegisterDate" use-column-prefix="false"/>
+        <embedded name="paymentDate" class="CommercePayPaymentDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

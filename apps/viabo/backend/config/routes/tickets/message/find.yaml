@@ -1,0 +1,4 @@
+find-messages:
+  path: '/api/tickets/messages'
+  controller: Viabo\Backend\Controller\tickets\message\find\MessagesFinderController
+  methods: GET

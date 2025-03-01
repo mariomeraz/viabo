@@ -1,0 +1,8 @@
+{
+  "name": "Viabo App Minimal UI",
+  "short_name": "Viabo-App",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

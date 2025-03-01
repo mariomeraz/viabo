@@ -1,0 +1,4 @@
+create-commerce-pay-transaction:
+  path: '/api/commerce/pay/generate/transaction'
+  controller: Viabo\Backend\Controller\management\terminalTransactionLog\CommerceTransactionCreatorController
+  methods: POST

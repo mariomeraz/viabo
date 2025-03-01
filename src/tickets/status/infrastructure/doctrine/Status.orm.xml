@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\tickets\status\domain\Status" table="cat_tickets_status">
+        <embedded name="id" class="StatusId" use-column-prefix="false"/>
+        <embedded name="name" class="StatusName" use-column-prefix="false"/>
+        <embedded name="active" class="StatusActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

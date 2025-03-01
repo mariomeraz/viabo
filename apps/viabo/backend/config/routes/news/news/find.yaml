@@ -1,0 +1,4 @@
+find-news:
+  path: '/api/news'
+  controller: Viabo\Backend\Controller\news\news\find\NewsFinderController
+  methods: GET

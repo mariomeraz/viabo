@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\card\domain\Card" table="t_management_cards">
+        <id name="id" type="card_id" column="Id"/>
+        <embedded name="main" class="CardMain" use-column-prefix="false"/>
+        <field name="number" type="card_number" column="Number"/>
+        <embedded name="cvv" class="CardCVV" use-column-prefix="false"/>
+        <embedded name="expirationDate" class="CardExpirationDate" use-column-prefix="false"/>
+        <embedded name="expirationMonth" class="CardExpirationMonth" use-column-prefix="false"/>
+        <embedded name="expirationYear" class="CardExpirationYear" use-column-prefix="false"/>
+        <embedded name="paymentProcessorId" class="CardPaymentProcessorId" use-column-prefix="false"/>
+        <embedded name="nip" class="CardNip" use-column-prefix="false"/>
+        <embedded name="spei" class="CardSpei" use-column-prefix="false"/>
+        <embedded name="paynet" class="CardPaynet" use-column-prefix="false"/>
+        <embedded name="statusId" class="CardStatusId" use-column-prefix="false"/>
+        <field name="commerceId" type="card_commerce_id" column="CommerceId"/>
+        <embedded name="ownerId" class="CardOwnerId" use-column-prefix="false"/>
+        <embedded name="recorderId" class="CardRecorderId" use-column-prefix="false"/>
+        <embedded name="assignmentDate" class="CardAssignmentDate" use-column-prefix="false"/>
+        <embedded name="registerDate" class="CardRegisterDate" use-column-prefix="false"/>
+        <embedded name="active" class="CardActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

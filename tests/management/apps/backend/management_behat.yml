@@ -1,0 +1,22 @@
+management_behat:
+  extensions:
+    FriendsOfBehat\SymfonyExtension:
+      kernel:
+        class: Viabo\Backend\ViaboKernel
+        environment: ~
+      bootstrap: apps/bootstrap.php
+    Behat\MinkExtension:
+      sessions:
+        symfony:
+          symfony: ~
+      base_url: ''
+
+  suites:
+    health_check:
+      paths: [ tests/management/apps/backend/healthCheck ]
+      contexts:
+        - Viabo\Tests\shared\infrastructure\behat\APIContext
+    card:
+      paths: [ tests/management/apps/backend/card ]
+      contexts:
+        - Viabo\Tests\shared\infrastructure\behat\APIContext

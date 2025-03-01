@@ -1,0 +1,9 @@
+find-support-reasons:
+  path: '/api/tickets/support-reasons'
+  controller: Viabo\Backend\Controller\tickets\supportReason\find\SupportReasonsFinderController
+  methods: GET
+
+find-support-reasons-by-profile:
+  path: '/api/tickets/applicant-profile/support-reasons'
+  controller: Viabo\Backend\Controller\tickets\supportReason\find\SupportReasonsFinderByApplicantProfileController
+  methods: GET

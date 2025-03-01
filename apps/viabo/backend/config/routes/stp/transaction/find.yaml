@@ -1,0 +1,29 @@
+find-transaction-spei-in-view:
+  path: "/spei/transaccion/{transactionId}"
+  controller: Viabo\Backend\Controller\stp\transaction\find\TransactionViewController
+  methods: GET
+
+find-transactions-balance:
+  path: "/api/spei/transaccions/balance"
+  controller: Viabo\Backend\Controller\stp\transaction\find\TransactionsBalanceController
+  methods: GET
+
+find-transactions:
+  path: "/api/spei/transaccions"
+  controller: Viabo\Backend\Controller\stp\transaction\find\TransactionsFinderController
+  methods: GET
+
+find-transactions-statement-account:
+  path: "/api/spei/transactions/statement-account"
+  controller: Viabo\Backend\Controller\stp\transaction\find\StatementAccountFinderController
+  methods: GET
+
+find-transactions-statement-account-pdf:
+  path: "/api/spei/transactions/statement-account-pdf"
+  controller: Viabo\Backend\Controller\stp\transaction\find\StatementAccountPdfFinderController
+  methods: GET
+
+find-transactions-commissions:
+  path: "/api/spei/transactions/stp-account-commissions"
+  controller: Viabo\Backend\Controller\stp\transaction\find\StpAccountCommissionsFinderController
+  methods: GET

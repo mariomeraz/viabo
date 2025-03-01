@@ -1,0 +1,4 @@
+find-external-accounts:
+  path: '/api/spei/external-accounts'
+  controller: Viabo\Backend\Controller\stp\externalAccount\find\ExternalAccountsFinderController
+  methods: GET

@@ -1,0 +1,60 @@
+---
+import CloseIcon from "@/components/icons/Close.astro"
+import Logo from "@/components/icons/Logo.astro"
+import MenuIcon from "@/components/icons/Menu.astro"
+
+const navItems = [
+	{
+		title: "Soluciones",
+		label: "soluciones",
+		url: "/#servicios",
+	},
+	{
+		title: "Planes",
+		label: "planes",
+		url: "/#planes",
+	},
+]
+---
+
+<header id="header-nav" class="fixed top-0 z-50 w-full px-10 py-4 md:px-0">
+	<div class="mx-auto flex max-w-screen-lg items-center justify-between">
+		<Logo class="h-auto w-32" />
+		<nav
+			id="header-menu"
+			class="animate-fade fixed inset-0 flex h-dvh w-full flex-1 -translate-y-full flex-col items-center justify-center gap-8 bg-primary-dark text-white transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:translate-y-[initial] md:flex-row md:justify-end md:bg-[initial] md:text-xl md:text-current lg:text-xl"
+		>
+			{
+				navItems.map((link) => (
+					<a
+						class:list={
+							"relative flex px-2 py-2 text-3xl font-medium transition hover:text-secondary md:text-xl md:hover:text-primary"
+						}
+						aria-label={link.label}
+						href={link.url}
+					>
+						{link.title}
+					</a>
+				))
+			}
+			<a
+				aria-label={"contacto"}
+				href={"/#contacto"}
+				class="relative flex items-center justify-center rounded-full bg-secondary px-5 py-1 text-center text-3xl font-medium text-black transition hover:scale-105 hover:text-primary dark:hover:text-blue-400 md:text-xl"
+			>
+				Contacto
+			</a>
+			<div class="relative">
+				<Logo class="fixed left-5 top-5 h-auto w-32 text-white md:hidden" />
+			</div>
+			<a
+				href="#header-nav"
+				id="menu-close"
+				class="absolute right-6 top-6 hover:text-secondary md:hidden"
+			>
+				<CloseIcon />
+			</a>
+		</nav>
+		<a href="#header-menu" id="menu-open" class="text-primary-light md:hidden"><MenuIcon /></a>
+	</div>
+</header>

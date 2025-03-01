@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de transacción SPEI</title>
+    <style>
+        /* poppins-latin-400-normal */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff2') format('woff2'), url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff') format('woff');
+            unicode-range: U+0 -00FF, U+131, U+152 -0153, U+2BB-02BC, U+2C6, U+2 DA, U+2 DC, U+304, U+308, U+329, U+2000 -206F, U+2074, U+20 AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* poppins-latin-500-normal */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 500;
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-500-normal.woff2') format('woff2'), url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-500-normal.woff') format('woff');
+            unicode-range: U+0 -00FF, U+131, U+152 -0153, U+2BB-02BC, U+2C6, U+2 DA, U+2 DC, U+304, U+308, U+329, U+2000 -206F, U+2074, U+20 AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* poppins-latin-600-normal */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 600;
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-600-normal.woff2') format('woff2'), url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-600-normal.woff') format('woff');
+            unicode-range: U+0 -00FF, U+131, U+152 -0153, U+2BB-02BC, U+2C6, U+2 DA, U+2 DC, U+304, U+308, U+329, U+2000 -206F, U+2074, U+20 AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            position: relative;
+            height: 100dvh;
+        }
+
+        .background-image {
+            position: absolute;
+            width: 50%;
+            top: 50%;
+            left: -25%;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            z-index: -1;
+        }
+
+        .container {
+            width: 100%;
+            height: 100dvh;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #221F20;
+            margin: 20px 0 10px;
+        }
+
+        hr.solid {
+            border-top: 2px solid #000;
+            margin: 10px 0;
+        }
+
+        .company-info {
+            font-size: 12px;
+            font-weight: bold;
+            color: #221F20;
+            text-wrap: balance;
+        }
+
+        .details-table {
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .details-table tr td {
+            padding: 8px 0;
+            border-bottom: 1px solid #D0D0D0;
+        }
+
+        .details-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .details-table tr td.separator {
+            padding: 0 8px;
+            /* Ajuste de padding para la línea vertical */
+            border-bottom: 0;
+        }
+
+        .subtitle {
+            color: #03194D;
+            font-weight: bold;
+            width: 30%;
+        }
+
+        .value {
+            width: 70%;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #878787;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1>Comprobante de Transacción SPEI</h1>
+        <hr class="solid">
+        <div style="margin-bottom:36px;margin-top:36px">
+            <img class="cpay-logo" src="https://viabo.com/production_images/cpay/cpay-logo.png" alt="logo central pay">
+            <h6 style="color:#878787;margin:0px">Top System SAPI de CV</h6>
+            <p class="company-info">Fuente del rey #95 Lomas de Tecamachalco C.P. 52780 Naucalpan Edo. de México,
+                México</p>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <h2>
+                <img alt="cpay-money-icon" src="https://viabo.com/production_images/cpay/cpay-icon-money.png"
+                     style="width: 25px; height: 25px; vertical-align: middle;">
+                Resumen Transacción
+            </h2>
+            <hr class="solid">
+            <table class="details-table">
+                <tr>
+                    <td class="subtitle">Monto:</td>
+                    <td class="separator"></td>
+
+                    <td class="value">
+                        <b>{{ amount }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">Tipo:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ transactionType }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">Concepto:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ concept }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">Fecha:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ date }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">Estatus:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>Liquidado</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">No. de Referencia:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ reference }}</b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>
+                <img alt="cpay-icon=wallet" src="https://viabo.com/production_images/cpay/cpay-icon-wallet.png"
+                     style="width: 25px; height: 25px; vertical-align: middle;">
+                Ordenante
+            </h2>
+            <hr class="solid">
+            <table class="details-table">
+                <tr>
+                    <td class="subtitle">Nombre:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ sourceName }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">RFC:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ sourceRfc }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">CLABE:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ sourceAccount }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">Medio de Pago:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>SPEI</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">Institución:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>STP</b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>
+                <img alt="cpay-icon=wallet" src="https://viabo.com/production_images/cpay/cpay-icon-wallet.png"
+                     style="width: 25px; height: 25px; vertical-align: middle;">
+                Beneficiario
+            </h2>
+            <hr class="solid">
+            <table class="details-table">
+                <tr>
+                    <td class="subtitle">Nombre:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ destinationName }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">RFC:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ destinationRfc }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">CLABE:</td>
+                    <td class="separator"></td>
+                    <td class="value">
+                        <b>{{ destinationAccount }}</b>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p class="note">
+            Nota: La fecha hora de este mensaje puede variar respecto a la fecha y hora real de la operación
+            transaccional. Esto depende de sus servicios de correo electrónico y/o computadora respecto al horario de su
+            zona.
+        </p>
+        <p class="note">Dudas o aclaraciones dirigirse al área correspondiente de la empresa
+            <a href="https://cpay.mx" class="color-primary" target="_blank" rel="noopener noreferrer">CENTRALPAY</a>.
+        </p>
+        <img src="https://viabo.com/production_images/cpay/cpay-footer-2x.png" alt="Footer"
+             style="width: 100%; max-width: 600px; margin-top: 20px; border-radius: 8px;">
+    </footer>
+</div>
+</body>
+
+</html>

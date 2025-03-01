@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\fundingOrder\domain\FundingOrder" table="t_management_funding_orders">
+        <embedded name="id" class="FundingOrderId" use-column-prefix="false"/>
+        <embedded name="referenceNumber" class="FundingOrderReferenceNumber" use-column-prefix="false"/>
+        <embedded name="status" class="FundingOrderStatusId" use-column-prefix="false"/>
+        <field name="cardId" type="card_id" column="CardId"/>
+        <embedded name="amount" class="FundingOrderAmount" use-column-prefix="false"/>
+        <embedded name="spei" class="FundingOrderSpei" use-column-prefix="false"/>
+        <embedded name="referencePayCash" class="FundingOrderReferencePayCash" use-column-prefix="false"/>
+        <embedded name="instructionsUrls" class="FundingOrderPayCashInstructionsUrls" use-column-prefix="false"/>
+        <embedded name="emails" class="FundingOrderEmails" use-column-prefix="false"/>
+        <embedded name="conciliationNumber" class="FundingOrderConciliationNumber" use-column-prefix="false"/>
+        <embedded name="conciliationUserId" class="FundingOrderConciliationUser" use-column-prefix="false"/>
+        <embedded name="conciliationDate" class="FundingOrderConciliationDate" use-column-prefix="false"/>
+        <embedded name="canceledByUser" class="FundingOrderCanceledByUser" use-column-prefix="false"/>
+        <embedded name="cancellationDate" class="FundingOrderCancellationDate" use-column-prefix="false"/>
+        <embedded name="registerDate" class="FundingOrderRegisterDate" use-column-prefix="false"/>
+        <embedded name="active" class="FundingOrderActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

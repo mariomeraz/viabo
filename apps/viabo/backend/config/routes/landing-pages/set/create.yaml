@@ -1,0 +1,4 @@
+register-prospect:
+  path: "/api/set/register/prospect"
+  controller: Viabo\Backend\Controller\landingPages\set\ProspectCreatorController
+  methods: POST

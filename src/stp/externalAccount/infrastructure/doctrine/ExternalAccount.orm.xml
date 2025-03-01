@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\stp\externalAccount\domain\ExternalAccount" table="t_spei_external_accounts">
+        <embedded name="id" class="ExternalAccountId" use-column-prefix="false"/>
+        <embedded name="interbankCLABE" class="ExternalAccountInterbankCLABE" use-column-prefix="false"/>
+        <embedded name="beneficiary" class="ExternalAccountBeneficiary" use-column-prefix="false"/>
+        <embedded name="rfc" class="ExternalAccountRfc" use-column-prefix="false"/>
+        <embedded name="alias" class="ExternalAccountAlias" use-column-prefix="false"/>
+        <embedded name="bankId" class="ExternalAccountBankId" use-column-prefix="false"/>
+        <embedded name="email" class="ExternalAccountEmail" use-column-prefix="false"/>
+        <embedded name="phone" class="ExternalAccountPhone" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="ExternalAccountCreatedByUser" use-column-prefix="false"/>
+        <embedded name="createDate" class="ExternalAccountCreateDate" use-column-prefix="false"/>
+        <embedded name="active" class="ExternalAccountActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

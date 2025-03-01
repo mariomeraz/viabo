@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\commission\domain\card\CommissionCard" table="t_backoffice_companies_commission_card">
+        <embedded name="speiInCarnet" class="Viabo\backoffice\commission\domain\card\CommissionCardSpeiInCarnet" use-column-prefix="false" />
+        <embedded name="speiInMasterCard" class="Viabo\backoffice\commission\domain\card\CommissionCardSpeiInMasterCard" use-column-prefix="false" />
+        <embedded name="speiOutCarnet" class="Viabo\backoffice\commission\domain\card\CommissionCardSpeiOutCarnet" use-column-prefix="false" />
+        <embedded name="speiOutMasterCard" class="Viabo\backoffice\commission\domain\card\CommissionCardSpeiOutMasterCard" use-column-prefix="false" />
+        <embedded name="pay" class="Viabo\backoffice\commission\domain\card\CommissionCardPay" use-column-prefix="false" />
+        <embedded name="sharedTerminal" class="Viabo\backoffice\commission\domain\card\CommissionCardSharedTerminal" use-column-prefix="false" />
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\services\domain\new\pay\PayService" table="t_backoffice_companies_service_pay">
+        <embedded name="employees" class="Viabo\backoffice\services\domain\new\pay\PayServiceEmployees" use-column-prefix="false" />
+        <embedded name="branchOffices" class="Viabo\backoffice\services\domain\new\pay\PayServiceBranchOffices" use-column-prefix="false" />
+        <embedded name="pointSaleTerminal" class="Viabo\backoffice\services\domain\new\pay\PayServicePointSaleTerminal" use-column-prefix="false" />
+        <embedded name="paymentApi" class="Viabo\backoffice\services\domain\new\pay\PayServicePaymentApi" use-column-prefix="false" />
+    </entity>
+
+</doctrine-mapping>

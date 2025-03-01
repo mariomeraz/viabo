@@ -1,0 +1,4 @@
+enable-authenticator-factor:
+  path: '/api/security/google-authenticator/enable'
+  controller: Viabo\Backend\Controller\security\authenticatorFactor\create\GoogleAuthenticatorEnableController
+  methods: POST

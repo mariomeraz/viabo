@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\stp\transaction\domain\Transaction" table="t_spei_transactions">
+        <embedded name="id" class="TransactionId" use-column-prefix="false"/>
+        <embedded name="businessId" class="TransactionBusinessId" use-column-prefix="false"/>
+        <embedded name="reference" class="TransactionReference" use-column-prefix="false"/>
+        <embedded name="trackingKey" class="TransactionTrackingKey" use-column-prefix="false"/>
+        <embedded name="concept" class="TransactionConcept" use-column-prefix="false"/>
+        <embedded name="sourceAccount" class="TransactionSourceAccount" use-column-prefix="false"/>
+        <embedded name="sourceName" class="TransactionSourceName" use-column-prefix="false"/>
+        <embedded name="sourceEmail" class="TransactionSourceEmail" use-column-prefix="false"/>
+        <embedded name="sourceBalance" class="TransactionSourceBalance" use-column-prefix="false"/>
+        <embedded name="destinationAccount" class="TransactionDestinationAccount" use-column-prefix="false"/>
+        <embedded name="destinationName" class="TransactionDestinationName" use-column-prefix="false"/>
+        <embedded name="destinationEmail" class="TransactionDestinationEmail" use-column-prefix="false"/>
+        <embedded name="destinationBankCode" class="TransactionDestinationBankCode" use-column-prefix="false"/>
+        <embedded name="destinationBalance" class="TransactionDestinationBalance" use-column-prefix="false"/>
+        <embedded name="amount" class="TransactionAmount" use-column-prefix="false"/>
+        <embedded name="commissions" class="TransactionCommissions" use-column-prefix="false"/>
+        <embedded name="liquidationDate" class="TransactionLiquidationDate" use-column-prefix="false"/>
+        <embedded name="urlCEP" class="TransactionUrlCEP" use-column-prefix="false"/>
+        <embedded name="stpId" class="TransactionStpId" use-column-prefix="false"/>
+        <embedded name="apiData" class="TransactionApiData" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="TransactionCreatedByUser" use-column-prefix="false"/>
+        <embedded name="createDate" class="TransactionCreateDate" use-column-prefix="false"/>
+        <embedded name="active" class="TransactionActive" use-column-prefix="false"/>
+
+        <one-to-one field="typeId" target-entity="Viabo\stp\transaction\domain\TransactionTypeId">
+            <join-column name="typeId" referenced-column-name="Id"/>
+        </one-to-one>
+
+        <one-to-one field="statusId" target-entity="Viabo\stp\transaction\domain\TransactionStatusId">
+            <join-column name="statusId" referenced-column-name="Id"/>
+        </one-to-one>
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,4 @@
+create-card-movements-of-set-api:
+  path: '/api/card/movements/set-api/register'
+  controller: Viabo\Backend\Controller\management\cardMovement\SetApiCardMovementsCreatorController
+  methods: GET

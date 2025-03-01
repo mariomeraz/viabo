@@ -1,0 +1,9 @@
+funding-order-conciliation:
+  path: "/api/funding-order/conciliation"
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrderConciliationUpdaterController
+  methods: PUT
+
+cancel-funding-order:
+  path: "/api/funding-order/cancel/{fundingOrderId}"
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrderCancelerController
+  methods: PUT

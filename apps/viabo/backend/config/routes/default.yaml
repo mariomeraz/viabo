@@ -1,0 +1,119 @@
+privacy:
+  path: "/privacy"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+policies:
+  path: "/policies"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+commerce-register:
+  path: "/comercio/registro"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+cards-register:
+  path: "/registro"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+auth-paths:
+  path: "/auth/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+commerce:
+  path: "/commerce"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+viabo-card-paths:
+  path: "/viabo-card/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+viabo-pay-paths:
+  path: "/viabo-pay/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+dashboard-master:
+  path: "/dashboard-master"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+funding-orders:
+  path: "/funding-orders"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+management:
+  path: "/management"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+management-paths:
+  path: "/management/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+charge:
+  path: "/cobro"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+charge-paths:
+  path: "/cobro/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+expenses-control:
+  path: "/expenses-control"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+error-404:
+  path: "/404"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+
+payments-paths:
+  path: "/pagos/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+viabo-spei-paths:
+  path: "/viabo-spei/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+catalogs-paths:
+  path: "/catalogs/{any}"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET
+  requirements:
+    any: ".+"
+
+support-incidences:
+  path: "/support/incidences"
+  controller: Viabo\Backend\Controller\RoutesFrontendController
+  methods: GET

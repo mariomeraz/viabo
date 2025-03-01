@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\commission\domain\Commission"
+            table="t_backoffice_companies_commissions"
+            inheritance-type="JOINED">
+        <discriminator-column name="type" type="string" />
+        <discriminator-map>
+            <discriminator-mapping value="1" class="Viabo\backoffice\commission\domain\card\CommissionCard" />
+            <discriminator-mapping value="2" class="Viabo\backoffice\commission\domain\spei\CommissionSpei" />
+        </discriminator-map>
+
+        <embedded name="id" class="Viabo\backoffice\commission\domain\CommissionId" use-column-prefix="false" />
+        <field name="companyId" type="company_id" column="CompanyId"/>
+        <embedded name="updatedByUser" class="Viabo\backoffice\commission\domain\CommissionUpdatedByUser" use-column-prefix="false" />
+        <embedded name="updateDate" class="Viabo\backoffice\commission\domain\CommissionUpdateDate" use-column-prefix="false" />
+        <embedded name="createdByUser" class="Viabo\backoffice\commission\domain\CommissionCreatedByUser" use-column-prefix="false" />
+        <embedded name="createDate" class="Viabo\backoffice\commission\domain\CommissionCreateDate" use-column-prefix="false" />
+    </entity>
+
+</doctrine-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\tickets\supportReason\domain\SupportReason" table="t_tickets_support_reasons">
+        <embedded name="id" class="SupportReasonId" use-column-prefix="false"/>
+        <embedded name="name" class="SupportReasonName" use-column-prefix="false"/>
+        <embedded name="description" class="SupportReasonDescription" use-column-prefix="false"/>
+        <embedded name="applicantProfileId" class="SupportReasonApplicantProfileId" use-column-prefix="false"/>
+        <embedded name="assignedProfileId" class="SupportReasonAssignedProfileId" use-column-prefix="false"/>
+        <embedded name="color" class="SupportReasonColor" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="SupportReasonCreatedByUser" use-column-prefix="false"/>
+        <embedded name="registerDate" class="SupportReasonRegisterDate" use-column-prefix="false"/>
+        <embedded name="active" class="SupportReasonActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

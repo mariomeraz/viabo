@@ -1,0 +1,4 @@
+create-terminal-consolidation:
+  path: '/api/commerce/terminal/consolidation/create'
+  controller: Viabo\Backend\Controller\management\terminalConsolidation\TerminalConsolidationCreatorController
+  methods: POST

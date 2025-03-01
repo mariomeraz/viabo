@@ -1,0 +1,4 @@
+find-cost_centers:
+  path: '/api/backoffice/cost-centers'
+  controller: Viabo\Backend\Controller\backoffice\costCenter\find\CostCentersFinderController
+  methods: GET

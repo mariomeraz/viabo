@@ -1,0 +1,4 @@
+register-commerce-commissions:
+  path: '/api/commerce/commissions/register'
+  controller: Viabo\Backend\Controller\backoffice\commissions\CommissionsCreatorController
+  methods: POST

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Notificación de Acceso a Viabo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 10px;
+            }
+
+            body {
+                font-family: 'Poppins', 'Roboto', serif;
+            }
+
+            .logo {
+                height: 27px;
+                width: auto;
+                margin-right: 20px;
+                margin-bottom: 25px;
+            }
+        </style>
+    </head>
+
+    <body style="
+            font-size: 12px;
+            line-height: 1.5;
+            color:black;">
+        <div style="margin: 0 auto;
+            width: 500px;
+            padding: 30px;
+            color:black;
+            border-radius:16px;
+            height:600px;
+            position:relative;
+            background: linear-gradient(0deg, rgba(185,255,0,1) 0%, rgba(255,255,255,1) 77%, rgba(255,255,255,1) 100%);">
+            <table>
+                <tr>
+                    <td>
+                        <img src="https://viabo.com/production_images/viabo_purple_agil.jpg" alt="Logo de la empresa"
+                             class="logo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h1 style="color: #5C34F5">¡Registro nuevo en Viabo! <br/></h1>
+                        <p style="	font-size: 20px;
+                            font-weight:bold;
+                            text-align: center;text-transform:capitalize;color:black"> {{ legalRepresentativeName }} </p>
+                        <p style="
+                            font-size: 12px;
+                            font-weight:bold;
+                            text-align: left; color:black">
+                            Te informamo que un usuario se ha registrado en viabo <br/>
+                            Con los siguientes datos:
+                        </p>
+                    </td>
+                    <td>
+                        <img style="width:200px" alt="viabo-success-register"
+                             src="https://viabo.com/production_images/success-2x.png"/>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="border-radius:8px;font-size: 14px;font-weight: bold;text-align: left;color: black;">
+                        Name : <span style="color:#844BFF">{{ userName }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-radius:8px;font-size: 14px;font-weight: bold;text-align: left;color: black;">
+                        Email : <span style="color:#844BFF">{{ userEmail }}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-radius:8px;font-size: 14px;font-weight: bold;text-align: left;color: black;">
+                        Tarjeta : <span style="color:#844BFF">{{ cardNumber }}</span>
+                    </td>
+                </tr>
+            </table>
+            <div style="position:absolute;bottom:0;width:500px">
+                <hr style="color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">
+                                <span>
+                                      <span style="vertical-align:middle;display:inline-block">
+                                       <img style="width:15px" alt="email-icon"
+                                            src="https://cdn.icon-icons.com/icons2/614/PNG/512/email-envelope-outline-shape-with-rounded-corners_icon-icons.com_56530.png"/>
+                                      </span>
+                                      <span style="font-size:10px;font-weight:bold;">ayuda@viabo.com</span>
+                                </span>
+                            </td>
+                            <td style="text-align:right" colspan="2">
+                                <span>
+                                  <span style="vertical-align:middle;display:inline-block">
+                                   <img style="width:15px" alt="instagram-icon"
+                                        src="https://cdn.icon-icons.com/icons2/791/PNG/512/instagram_f_icon-icons.com_65485.png"/>
+                                  </span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\receipt\domain\Receipt" table="t_management_cards_receipts">
+        <embedded name="id" class="ReceiptId" use-column-prefix="false"/>
+        <embedded name="amountTotal" class="ReceiptAmountTotal" use-column-prefix="false"/>
+        <embedded name="note" class="ReceiptNote" use-column-prefix="false"/>
+        <embedded name="files" class="ReceiptFiles" use-column-prefix="false"/>
+        <embedded name="invoice" class="ReceiptInvoice" use-column-prefix="false"/>
+        <embedded name="userId" class="ReceiptUserId" use-column-prefix="false"/>
+        <embedded name="date" class="ReceiptDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

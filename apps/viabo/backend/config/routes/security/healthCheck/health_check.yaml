@@ -1,0 +1,4 @@
+health-check:
+  path: /api/health-check
+  controller: Viabo\Backend\Controller\security\healthCheck\HealthCheckController
+  methods: GET

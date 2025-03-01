@@ -1,0 +1,4 @@
+find-profiles:
+  path: '/api/profiles'
+  controller: Viabo\Backend\Controller\security\profile\find\ProfilesFinderController
+  methods: GET

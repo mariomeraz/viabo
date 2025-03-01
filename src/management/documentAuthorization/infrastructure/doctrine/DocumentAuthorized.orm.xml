@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\documentAuthorization\domain\DocumentAuthorized"
+            table="t_management_commerces_documents_authorized">
+        <embedded name="id" class="DocumentAuthorizationId" use-column-prefix="false"/>
+        <field name="documentId" type="mdocument_id" column="DocumentId"/>
+        <embedded name="userId" class="DocumentAuthorizationUserId" use-column-prefix="false"/>
+        <embedded name="userName" class="DocumentAuthorizationUserName" use-column-prefix="false"/>
+        <embedded name="userProfileId" class="DocumentAuthorizationUserProfileId" use-column-prefix="false"/>
+        <embedded name="userProfileName" class="DocumentAuthorizationUserProfileName" use-column-prefix="false"/>
+        <embedded name="register" class="DocumentAuthorizationRegister" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

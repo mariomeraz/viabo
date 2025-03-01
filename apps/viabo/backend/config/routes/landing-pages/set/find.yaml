@@ -1,0 +1,4 @@
+set-web:
+  path: "/set"
+  controller: Viabo\Backend\Controller\landingPages\set\ViewController
+  methods: GET

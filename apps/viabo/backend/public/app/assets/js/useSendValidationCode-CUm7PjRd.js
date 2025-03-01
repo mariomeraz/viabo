@@ -1,0 +1,2 @@
+import{bx as s,f as i}from"./vendor-5lkxkETF.js";import{a as t,g as r,b as c}from"./index-DkbAsBWZ.js";const d=async()=>{const{data:a}=await t.post("/api/code/verification/resend");return a},v=async a=>{const{data:o}=await t.post("/api/code/verificate",a);return o},f=(a={})=>{const{enqueueSnackbar:o}=s();return i({mutationFn:d,onSuccess:()=>{o("Código Enviado!",{variant:"success"})},onError:e=>{const n=r(e,"No se puede enviar el código");o(n,{variant:c(e),autoHideDuration:5e3})},...a})};export{f as u,v};
+//# sourceMappingURL=useSendValidationCode-CUm7PjRd.js.map

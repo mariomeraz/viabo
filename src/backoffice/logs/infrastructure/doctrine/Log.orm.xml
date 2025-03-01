@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\logs\domain\Log"  table="t_business_commerces_log">
+        <embedded name="id" class="LogId" use-column-prefix="false"/>
+        <embedded name="type" class="LogType" use-column-prefix="false"/>
+        <embedded name="aggregateId" class="LogAggregateId" use-column-prefix="false"/>
+        <embedded name="body" class="LogBody" use-column-prefix="false"/>
+        <embedded name="updatedByUser" class="LogUpdatedByUser" use-column-prefix="false"/>
+        <embedded name="occurredOn" class="LogOccurredOn" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

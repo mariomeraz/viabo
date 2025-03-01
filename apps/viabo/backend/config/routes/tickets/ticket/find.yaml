@@ -1,0 +1,4 @@
+find-tickets:
+  path: '/api/tickets'
+  controller: Viabo\Backend\Controller\tickets\ticket\find\TicketsFinderController
+  methods: GET

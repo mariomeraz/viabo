@@ -1,0 +1,34 @@
+find-card-movements:
+  path: '/api/card/movements'
+  controller: Viabo\Backend\Controller\management\cardMovement\CardMovementsFinderController
+  methods: GET
+
+find-master-cards-movements:
+  path: '/api/master-cards/movements'
+  controller: Viabo\Backend\Controller\management\cardMovement\CardsMasterMovementsFinderController
+  methods: GET
+
+find-card-movements-conciliated-by-terminal:
+  path: '/api/card/movements/terminal/conciliated'
+  controller: Viabo\Backend\Controller\management\cardMovement\CardMovementsConsolidatedFinderController
+  methods: GET
+
+find-unreconciled-master-card-movements:
+  path: '/api/master-card/movements/unreconciled'
+  controller: Viabo\Backend\Controller\management\cardMovement\UnreconciledMasterCardMovementsFinderController
+  methods: GET
+
+find-card-movements-by-commerce:
+  path: '/api/cards/movements/commerce'
+  controller: Viabo\Backend\Controller\management\cardMovement\CardMovementsFinderByCommerceController
+  methods: GET
+
+notifications-cards-movements:
+  path: '/api/notifications/cards/movements'
+  controller: Viabo\Backend\Controller\management\cardMovement\CardMovementsNotifierController
+  methods: GET
+
+notifications-cards-masters-movements:
+  path: '/api/notifications/cards-masters/movements'
+  controller: Viabo\Backend\Controller\management\cardMovement\CardsMastersMovementsNotifierController
+  methods: GET

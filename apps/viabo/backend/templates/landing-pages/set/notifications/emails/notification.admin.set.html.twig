@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro Nuevo - SET</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                padding: 20px 0;
+                margin: auto;
+                position: relative;
+                max-width: 40%;
+            }
+
+            .footer-table {
+                font-size: 11px;
+                color: #808285;
+                margin-top: 25px;
+            }
+
+            @media(min-width: 768px) {
+                .background-container {
+                    height: 100 vH;
+                }
+            }
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="background-container">
+            <div class="container">
+                <h2 style="color:#8DD403">Registro Nuevo</h2>
+                <h5>Te informamos que sea registrado un cliente potencial. Estos son los datos registrados:</h5>
+                <ul>
+                    <li><b>Giro Comercial :</b> {{ businessType }}</li>
+                    <li><b>Nombre :</b> {{ name }}</li>
+                    <li><b>Apellidos :</b> {{ lastname }}</li>
+                    <li><b>Empresa :</b> {{ company }}</li>
+                    <li><b>Correo :</b> {{ correo }}</li>
+                    <li><b>Teléfono :</b> {{ phone }}</li>
+                    <li><b>Metodo de contacto :</b> {{ contactMethod }}</li>
+                </ul>
+                <p class="footer-table">
+                    Gracias por no responder este correo. Dudas o aclaraciones dirigirse al área correspondiente de la empresa.
+                </p>
+            </div>
+
+        </div>
+    </body>
+
+</html>

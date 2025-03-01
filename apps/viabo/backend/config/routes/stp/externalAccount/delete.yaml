@@ -1,0 +1,4 @@
+disable-external-account:
+  path: '/api/spei/external-account/disable'
+  controller: Viabo\Backend\Controller\stp\externalAccount\delete\ExternalAccountDisablerController
+  methods: PUT

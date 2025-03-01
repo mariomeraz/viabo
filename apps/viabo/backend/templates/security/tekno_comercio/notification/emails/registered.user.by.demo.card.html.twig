@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Notificación de Acceso SET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        body {
+            font-family: 'Poppins', 'Roboto', serif;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+            margin-right: 20px;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body style="
+            font-size: 12px;
+            line-height: 1.5;
+            color:black;">
+<div style="margin: 0 auto;
+            width: 500px;
+            padding: 30px;
+            color:black;
+            border:1px solid;
+            border-radius:16px;
+            border-color:#EC1B2E;
+            height:600px;
+            position:relative;
+            background: linear-gradient(0deg, rgb(236,29,47) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%);">
+    <table>
+        <tr>
+            <td>
+                <img src="https://viabo.com/production_images/robeca/robeca_logo.png" alt="SET logo"
+                     class="logo">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1 style="color: #EC1B2E">¡Registro nuevo en ROBECA! <br /></h1>
+                <p style="	font-size: 20px;
+                            font-weight:bold;
+                            text-align: center;text-transform:capitalize;color:black"> {{ legalRepresentativeName }} </p>
+                <p style="
+                            font-size: 12px;
+                            font-weight:bold;
+                            text-align: left; color:black">
+                    Te informamos que un usuario se ha registrado en la plataforma <br />
+                    Con los siguientes datos:
+                </p>
+            </td>
+            <td>
+                <img style="width:200px" alt="viabo-success-register"
+                     src="https://viabo.com/production_images/success-2x.png" />
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td style="border-radius:8px;font-size: 14px;font-weight: bold;text-align: left;color: black;">
+                Name : <span style="color:#EC1B2E">{{ userName }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-radius:8px;font-size: 14px;font-weight: bold;text-align: left;color: black;">
+                Email : <span style="color:#EC1B2E">{{ userEmail }}</span>
+            </td>
+        </tr>
+        <tr>
+            <td style="border-radius:8px;font-size: 14px;font-weight: bold;text-align: left;color: black;">
+                Tarjeta : <span style="color:#EC1B2E">{{ cardNumber }}</span>
+            </td>
+        </tr>
+    </table>
+    <div style="position:absolute;bottom:0;width:500px">
+        <hr style="color:black">
+        
+    </div>
+</div>
+</body>
+
+</html>

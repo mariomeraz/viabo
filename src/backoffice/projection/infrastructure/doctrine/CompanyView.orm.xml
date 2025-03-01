@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\backoffice\projection\domain\CompanyView" table="v_backoffice_companies">
+        <id name="id" column="Id"/>
+        <field name="folio" column="Folio"/>
+        <field name="fatherId" column="CommerceId"/>
+        <field name="legalRepresentative" column="LegalRepresentative"/>
+        <field name="legalRepresentativeName" column="LegalRepresentativeName"/>
+        <field name="legalRepresentativeEmail" column="LegalRepresentativeEmail"/>
+        <field name="legalRepresentativePhone" column="LegalRepresentativePhone"/>
+        <field name="legalRepresentativeRegister" column="LegalRepresentativeRegister"/>
+        <field name="legalRepresentativeLastSession" column="LegalRepresentativeLastSession"/>
+        <field name="fiscalPersonType" column="FiscalPersonType"/>
+        <field name="fiscalName" column="FiscalName"/>
+        <field name="tradeName" column="TradeName"/>
+        <field name="rfc" column="Rfc"/>
+        <field name="postalAddress" column="PostalAddress"/>
+        <field name="phoneNumbers" column="PhoneNumbers"/>
+        <field name="logo" column="Logo"/>
+        <field name="slug" column="Slug"/>
+        <field name="balance" column="Balance"/>
+        <field name="bankAccount" column="BankAccount"/>
+        <field name="publicTerminal" column="PublicTerminal"/>
+        <field name="employees" column="Employees"/>
+        <field name="branchOffices" column="BranchOffices"/>
+        <field name="pointSaleTerminal" column="PointSaleTerminal"/>
+        <field name="paymentApi" column="PaymentApi"/>
+        <field name="register" column="Register"/>
+        <field name="type" column="Type"/>
+        <field name="typeName" column="TypeName"/>
+        <field name="allowTransactions" column="AllowTransactions"/>
+        <field name="statusId" column="StatusId"/>
+        <field name="statusName" column="StatusName"/>
+        <field name="stpAccountId" column="StpAccountId"/>
+        <field name="registerStep" column="RegisterStep"/>
+        <field name="services" column="Services"/>
+        <field name="servicesIds" column="ServicesId"/>
+        <field name="documents" column="Documents"/>
+        <field name="commissions" column="Commissions"/>
+        <field name="createdByUser" column="CreatedByUser"/>
+        <field name="active" column="Active"/>
+    </entity>
+
+</doctrine-mapping>

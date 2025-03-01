@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\security\session\domain\Session" table="t_users_sessions">
+        <embedded name="id" class="SessionId" use-column-prefix="false"/>
+        <field name="userId" type="user_id" column="UserId"/>
+        <embedded name="loginDate" class="SessionLoginDate" use-column-prefix="false"/>
+        <embedded name="logoutDate" class="SessionLogoutDate" use-column-prefix="false"/>
+        <embedded name="active" class="SessionActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

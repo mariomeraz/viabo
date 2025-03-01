@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\stp\bank\domain\Bank" table="cat_spei_banks">
+        <embedded name="id" class="BankId" use-column-prefix="false"/>
+        <embedded name="code" class="BankCode" use-column-prefix="false"/>
+        <embedded name="shortName" class="BankShortName" use-column-prefix="false"/>
+        <embedded name="name" class="BankName" use-column-prefix="false"/>
+        <embedded name="active" class="BankActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

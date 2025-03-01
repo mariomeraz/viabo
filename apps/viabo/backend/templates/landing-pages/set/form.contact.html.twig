@@ -1,0 +1,110 @@
+<section class="container-fluid p-0 m-0 bg-green-circles-image pt-2" id='contact-section'>
+	<div class="container">
+		<div class="row py-5">
+			<div class="col-12 col-md-6 mt-3">
+				<div class="d-flex flex-column">
+					<div class="my-2">
+						<h2 class="fs-1">¿Dudas?<br>Agenda un demo.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 my-3 ">
+				<form class="row g-3" id="set-form-contact">
+					<div class="col-12 ">
+						<label for="giro" class="form-label require">Giro Comercial</label>
+						<select name='business-type' class="w-100 form-select">
+							<option value="Financiera">Financiera</option>
+							<option value="PYME">PYME</option>
+							<option value="Entidad Federativa">Entidad Federativa</option>
+							<option value="Dependencia de gobierno">Dependencia de gobierno</option>
+							<option value="Sector Transporte">Sector Transporte</option>
+							<option value="Otro">Otro</option>
+						</select>
+					</div>
+					<div class="col-12 col-md-6 ">
+						<label for="nombre" class="form-label require">Nombre (s)</label>
+						<input type="text" pattern="^\S(.*\S)?$" title="No se permiten espacios en blanco al inicio" placeholder="" class="form-control" id="name" name="name" required>
+
+
+					</div>
+					<div class="col-12 col-md-6 ">
+						<label for="apellido" class="form-label require">Apellido (s)</label>
+						<input type="text" pattern="^\S(.*\S)?$" title="No se permiten espacios en blanco al inicio" class="form-control" id="lastname" name="lastname" required>
+
+
+					</div>
+					<div class="col-12 ">
+						<label for="empresa" class="form-label">Empresa</label>
+						<input type="text" class="form-control" id="company" name="company">
+
+					</div>
+					<div class="col-12 ">
+						<label for="email" class="form-label require">Email</label>
+						<input type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}" class="form-control" id="email" name="email" title="Ingrese una dirección de correo electrónico válida" required>
+
+					</div>
+					<div class="col-12">
+						<label for="telefono" class="form-label">Teléfono</label>
+						<input type="tel" class="form-control" id="telefono" name="phone">
+					</div>
+					<div class="col-12">
+						<label for="metodo" class="form-label require">Método de contacto preferido</label>
+						<select class="w-100 form-select" name="contact-method" required>
+							<option value="Email">Mail</option>
+							<option value="WhatsApp">WhatsApp</option>
+							<option value="Teléfono">Teléfono</option>
+						</select>
+					</div>
+					<div class="col-12 text-center py-3">
+						<input role="button" type="checkbox" class="form-check-input" required id="terms" name="terms">
+						<label class="form-check-label ms-2 fw-bold" for="terminos">Acepto los
+							<a href="/policies" target="_blank">Términos y Condiciones</a>
+
+						</label>
+					</div>
+
+					<div class="col-12 d-grid" id='container-submit-button'>
+						<button type="submit" class="viabo-button-inverse no-wrap-text">Enviar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	{#Notificaciones#}
+
+	<div class="toast-container position-fixed top-0 end-0 p-3">
+		<div id="notification-contact-success" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+
+			<div class="d-flex">
+				<div class="toast-body">
+					Gracias por su registro. En breve nos pondremos en contacto.
+				</div>
+				<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+		</div>
+
+		<div id="notification-contact-error" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+
+			<div class="d-flex">
+				<div class="toast-body">
+					Ocurrio un problema al enviar la información.
+				</div>
+				<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+		</div>
+
+
+		<div id="notification-contact-warning" class="toast align-items-center text-bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+
+			<div class="d-flex">
+				<div class="toast-body" id="message-warning-notification"></div>
+				<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+		</div>
+
+
+	</div>
+
+
+</section>

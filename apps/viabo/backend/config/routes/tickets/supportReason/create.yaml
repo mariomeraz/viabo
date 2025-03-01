@@ -1,0 +1,4 @@
+create-cause:
+  path: '/api/support-reason/new'
+  controller: Viabo\Backend\Controller\tickets\supportReason\create\SupportReasonCreatorController
+  methods: POST

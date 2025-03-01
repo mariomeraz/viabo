@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificiación de Identidad</title>
+    <style>
+        body{font-family:Arial,sans-serif;margin:0;padding:0}
+        .container{width:100%;background-image:url('https://viabo.com/production_images/email_dark_background.jpg');background-size:cover;background-repeat:no-repeat;padding-top:100px}
+        .content-card{max-width:400px;margin:70px auto 40px auto;background-image:url('https://viabo.com/production_images/white_bg.jpg');background-size:cover;background-repeat:no-repeat;border:2px solid #5C34F5;border-radius:10px;padding:20px;text-align:center}
+        .footer{background-color:transparent;padding:20px;text-align:justify;color:#fff;font-size:10px}
+        .card-header{text-align:center;margin-bottom:20px}
+        .card-header img{max-width:150px}
+        .card-header h1{font-size:20px;color:#5C34F5}
+        .code{border:2px solid #808285;color:#808285;border-radius:10px;font-size:20px;letter-spacing:8px;padding:10px;margin-top:20px}
+        .verification-text{color:#5C34F5;font-size:16px;margin-top:20px}
+        .additional-text{color:#5C34F5;font-size:11px;text-align:center;margin-top:20px;opacity:.8}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content-card">
+            <div class="card-header">
+                <img src="https://viabo.com/production_images/viabo_purple_2x.jpg" alt="Logo de la empresa">
+                <h1>¡Hola, {{ name }}!</h1>
+                <div class="code">{{ code }}</div>
+                <p class="verification-text">Ingresa este código en la plataforma para poder verificar tu cuenta.</p>
+                <p class="additional-text">No compartas el código ni el correo con nadie.<br>Si no has solicitado una verificación de cuenta, por favor ignora este correo.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Aviso legal: Esta Alerta es para su referencia únicamente y ha sido generada automáticamente por viabo.com | Nosotros no hemos verificado el contenido de esta Alerta y por ello no tenemos responsabilidad sobre la misma. Usted debe efectuar su propia verificación y confirmación de la información, incluyendo sin limitación, el estatus de cualquier transacción señalada en la misma. Debido a que esta Alerta es enviada a través de Internet o por mensaje de texto SMS, por favor note que cualquier comunicación puede estar retrasada, interrumpida o podría fallar. En particular, los mensajes electrónicos enviados vía Internet no pueden garantizar ser entregados en tiempo, en forma segura o libre de error o virus, debido a que esta información puede ser interceptada, alterada, perdida, llegar retrasada o contener virus. Viabo Pay y los miembros del SE Transaccionales S.A.P.I. de C.V. (SET) no asumen ninguna responsabilidad por daños directos, indirectos o pérdidas derivadas de la utilización de esta Alerta sea causada por el banco o por terceras partes. La información contenida en esta Alerta es confidencial y puede estar legalmente protegida. Si usted no es el destinatario no puede copiar, enviar, revelar o usar ninguna parte de ella. Si usted ha recibido esta Alerta por error, por favor bórrela, elimine todas las copias de su sistema y notifique al remitente inmediatamente. Emitido por Viabo Pay.</p>
+            <hr>
+            <p>This e-mail is confidential. It may also be legally privileged. If you are not the addressee you may not copy, forward, disclose or use any part of it. If you have received this message in error, please delete it and all copies from your system and notify the sender immediately by return e-mail. Internet communications cannot be guaranteed to be timely, secure, error or virus-free. The sender does not accept liability for any errors or omissions.</p>
+            <hr>
+            <p>SAVE PAPER - THINK BEFORE YOU PRINT!</p>
+        </div>
+    </div>
+</body>
+</html>

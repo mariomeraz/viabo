@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\cardMovement\domain\CardMovementView" table="v_management_cards_movements">
+        <id name="id" column="Id" />
+        <field name="setTransactionId" column="SetTransactionId" />
+        <field name="cardId" column="CardId" />
+        <field name="cardMain" column="CardMain" />
+        <field name="cardOwnerName" column="CardOwnerName" />
+        <field name="cardNumber" column="CardNumber" />
+        <field name="cardPaymentProcessorId" column="CardPaymentProcessorId" />
+        <field name="commerceId" column="CommerceId" />
+        <field name="commerceName" column="CommerceName" />
+        <field name="receiptId" column="ReceiptId" />
+        <field name="receiptFiles" column="ReceiptFiles" />
+        <field name="type" column="Type" />
+        <field name="operationType" column="OperationType" />
+        <field name="amount" column="Amount" />
+        <field name="concept" column="Concept" />
+        <field name="description" column="Description" />
+        <field name="apiData" column="ApiData" />
+        <field name="date" column="Date" />
+    </entity>
+
+</doctrine-mapping>

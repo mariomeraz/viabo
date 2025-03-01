@@ -1,0 +1,4 @@
+encrypt-and-decrypt:
+  path: '/api/crypt'
+  controller: Viabo\Backend\Controller\backoffice\crypt\CryptController
+  methods: POST

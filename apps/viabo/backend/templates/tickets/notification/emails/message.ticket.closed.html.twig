@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencia en proceso</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-container {
+            width: 100%;
+            background-image: url('https://viabo.com/production_images/green_degradate.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .card-container {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background: transparent;
+            padding: 20px 35px;
+            max-width: 80%;
+            margin: auto;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .inner-card {
+            background-image: url('https://viabo.com/production_images/white_bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 85%;
+            margin: auto;
+            position: relative;
+        }
+
+        .logo {
+            height: 27px;
+            width: auto;
+            margin-right: 20px;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #5C34F5;
+            text-align: left;
+            margin: 0;
+        }
+
+        .text {
+            font-size: 16px;
+            color: #808285;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #5C34F5;
+            color: #fff;
+            border: none;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: justify;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            font-size: 10px;
+            color: #808285;
+        }
+
+        .footer hr {
+            border: none;
+            border-top: 1px solid #808285;
+            margin: 10px 0;
+        }
+
+        .card-body-mail{
+            background-size:40%;
+            background-repeat:no-repeat; 
+            background-position: top 30px right 0px;
+        }
+
+        .subtitle{
+            max-width:70%;
+            font-size:12px;
+            color:#808285;
+        }
+
+        .footer-table{
+            font-size:11px;
+            color:#808285;
+            text-align:center;
+            margin-top:25px;
+        }
+
+        .details-title{
+            font-weight:600;
+            font-size:13px;
+            margin-top:25px;
+            color: #5C34F5;
+        }
+
+        .details-table{
+            width:100%;
+            font-size:12px;
+        }
+
+        .details-table tr td{
+            padding: 8px 0px;
+            margin:0px;
+            border-bottom:1px solid #D0D0D0;            
+        }
+
+        .details-table tr td:first-child{
+            color:#808285;
+        }
+
+        .purple{
+            color: #5C34F5;
+            font-weight:600;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-container">
+        <div class="card-container">
+            <div class="inner-card">
+                <div class="card-body-mail">
+                    <img src="https://viabo.com/production_images/viabo_purple_agil.jpg" alt="Logo de la empresa" class="logo">
+                    <h1 class="title">¡Ticket <br> Concluido!</h1>
+                    <p class="subtitle">Hola {{ userName }}, te informamos sobre el estatus de tu ticket :</p>
+                    <p class="details-title">Detalles del ticket:</p>
+                    <table class="details-table">
+                        <tr>
+                            <td>Fecha:</td>
+                            <td class="purple">{{ createdDate }}</td>
+                        </tr>
+                        <tr>
+                            <td>#Ticket:</td>
+                            <td class="purple">{{ ticket }}</td>
+                        </tr>
+                        <tr>
+                            <td>Usuario:</td>
+                            <td class="purple">{{ userName }}</td>
+                        </tr>
+                        <tr>
+                            <td>Descripcion del problema:</td>
+                            <td class="purple">{{ description }}</td>
+                        </tr>
+                        <tr>
+                            <td>Estado del ticket:</td>
+                            <td class="purple">Resuelto</td>
+                        </tr>
+                    </table>
+                    <p class="footer-table">Gracias por no responder este correo.<br>Dudas o aclaraciones dirigirse al área correspondiente de la empresa.</p>                    
+                    <hr>
+                    <p class="footer-table">ayuda@viabo.com</p>
+                </div>
+            </div>
+            <div class="footer">
+                <hr>
+                <p>Aviso legal: Esta Alerta es para su referencia únicamente y ha sido generada automáticamente por viabo.com | Nosotros no hemos verificado el contenido de esta Alerta y por ello no tenemos responsabilidad sobre la misma. Usted debe efectuar su propia verificación y confirmación de la información, incluyendo sin limitación, el estatus de cualquier transacción señalada en la misma. Debido a que esta Alerta es enviada a través de Internet o por mensaje de texto SMS, por favor note que cualquier comunicación puede estar retrasada, interrumpida o podría fallar. En particular, los mensajes electrónicos enviados vía Internet no pueden garantizar ser entregados en tiempo, en forma segura o libre de error o virus, debido a que esta información puede ser interceptada, alterada, perdida, llegar retrasada o contener virus. Viabo Pay y los miembros del SE Transaccionales S.A.P.I. de C.V. (SET) no asumen ninguna responsabilidad por daños directos, indirectos o pérdidas derivadas de la utilización de esta Alerta sea causada por el banco o por terceras partes. La información contenida en esta Alerta es confidencial y puede estar legalmente protegida. Si usted no es el destinatario no puede copiar, enviar, revelar o usar ninguna parte de ella. Si usted ha recibido esta Alerta por error, por favor bórrela, elimine todas las copias de su sistema y notifique al remitente inmediatamente. Emitido por Viabo Pay.</p>
+                <hr>
+                <p>This e-mail is confidential. It may also be legally privileged. If you are not the addressee you may not copy, forward, disclose or use any part of it. If you have received this message in error, please delete it and all copies from your system and notify the sender immediately by return e-mail. Internet communications cannot be guaranteed to be timely, secure, error or virus-free. The sender does not accept liability for any errors or omissions.</p>
+                <hr>
+                <p>SAVE PAPER - THINK BEFORE YOU PRINT!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

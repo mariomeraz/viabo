@@ -1,0 +1,4 @@
+module-find:
+  path: '/api/modules/user'
+  controller: Viabo\Backend\Controller\security\module\find\UserModulesFinderController
+  methods: GET

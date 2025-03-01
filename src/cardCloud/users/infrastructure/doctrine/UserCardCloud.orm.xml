@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\cardCloud\users\domain\UserCardCloud" table="t_stp_card_cloud_users">
+        <embedded name="id" class="UserCardCloudId" use-column-prefix="false"/>
+        <embedded name="businessId" class="UserCardCloudBusinessId" use-column-prefix="false"/>
+        <embedded name="cardId" class="CardCloudId" use-column-prefix="false"/>
+        <embedded name="ownerId" class="UserCardCloudOwnerId" use-column-prefix="false"/>
+        <embedded name="name" class="UserCardCloudName" use-column-prefix="false"/>
+        <embedded name="lastname" class="UserCardCloudLastname" use-column-prefix="false"/>
+        <embedded name="email" class="UserCardCloudEmail" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="UserCardCloudCreatedByUser" use-column-prefix="false"/>
+        <embedded name="createDate" class="UserCardCloudCreateDate" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

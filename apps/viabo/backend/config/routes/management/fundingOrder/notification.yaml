@@ -1,0 +1,4 @@
+send-funding-order-by-email:
+  path: "/api/funding-order/send"
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrderSenderController
+  methods: POST

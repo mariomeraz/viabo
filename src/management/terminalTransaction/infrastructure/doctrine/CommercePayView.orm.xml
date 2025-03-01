@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\terminalTransaction\domain\CommercePayView" table="v_management_commerces_pay">
+        <id name="id" column="Id"/>
+        <field name="commerceId" column="CommerceId"/>
+        <field name="commerceName" column="CommerceName"/>
+        <field name="sharedTerminalCommission" column="SharedTerminalCommission"/>
+        <field name="terminalId" column="TerminalId"/>
+        <field name="reference" column="Reference"/>
+        <field name="clientName" column="ClientName"/>
+        <field name="email" column="Email"/>
+        <field name="phone" column="Phone"/>
+        <field name="description" column="Description"/>
+        <field name="amount" column="Amount"/>
+        <field name="urlCode" column="UrlCode"/>
+        <field name="statusId" column="StatusId"/>
+        <field name="statusName" column="StatusName"/>
+        <field name="liquidationStatusId" column="LiquidationStatusId"/>
+        <field name="liquidationStatusName" column="LiquidationStatusName"/>
+        <field name="apiAuthCode" column="ApiAuthCode"/>
+        <field name="apiReferenceNumber" column="ApiReferenceNumber"/>
+        <field name="createdByUser" column="CreatedByUser"/>
+        <field name="registerDate" column="RegisterDate"/>
+    </entity>
+
+</doctrine-mapping>

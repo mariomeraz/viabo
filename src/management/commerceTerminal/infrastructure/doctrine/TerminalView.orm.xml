@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\commerceTerminal\domain\TerminalView" table="v_management_commerces_terminals">
+        <id name="id" column="Id"/>
+        <field name="main" column="Main" />
+        <field name="commerceId" column="CommerceId" />
+        <field name="merchantId" column="MerchantId" />
+        <field name="terminalId" column="TerminalId" />
+        <field name="apiData" column="ApiData" />
+        <field name="createdByUser" column="CreatedByUser" />
+        <field name="name" column="Name" />
+        <field name="typeId" column="TypeId" />
+        <field name="typeName" column="TypeName" />
+        <field name="registerDate" column="RegisterDate" />
+        <field name="speiCard" column="SpeiCard" />
+        <field name="cardId" column="CardId"/>
+        <field name="isExternalConciliation" column="IsExternalConciliation"/>
+        <field name="active" column="Active" />
+    </entity>
+
+</doctrine-mapping>

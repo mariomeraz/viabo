@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\card\domain\CardView" table="v_management_cards">
+        <id name="id" column="Id"/>
+        <field name="clientKey" column="ClientKey"/>
+        <field name="main" column="Main"/>
+        <field name="number" column="Number"/>
+        <field name="cvv" column="CVV"/>
+        <field name="expirationDate" column="ExpirationDate"/>
+        <field name="paymentProcessorId" column="PaymentProcessorId"/>
+        <field name="paymentProcessorName" column="PaymentProcessorName"/>
+        <field name="statusId" column="StatusId"/>
+        <field name="statusName" column="StatusName"/>
+        <field name="commerceId" column="CommerceId"/>
+        <field name="commerceName" column="CommerceName"/>
+        <field name="ownerId" column="OwnerId"/>
+        <field name="ownerName" column="OwnerName"/>
+        <field name="ownerLastname" column="OwnerLastname"/>
+        <field name="ownerEmail" column="OwnerEmail"/>
+        <field name="ownerPhone" column="OwnerPhone"/>
+        <field name="recorderId" column="RecorderId"/>
+        <field name="recorderName" column="RecorderName"/>
+        <field name="assignmentDate" column="AssignmentDate"/>
+        <field name="registerDate" column="RegisterDate"/>
+        <field name="active" column="Active"/>
+    </entity>
+
+</doctrine-mapping>

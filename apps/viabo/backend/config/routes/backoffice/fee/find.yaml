@@ -1,0 +1,4 @@
+find-rates:
+  path: '/api/backoffice/rates'
+  controller: Viabo\Backend\Controller\backoffice\fee\find\RatesFinderController
+  methods: GET

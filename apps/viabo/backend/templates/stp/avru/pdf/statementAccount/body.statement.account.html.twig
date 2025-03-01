@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de transacción SPEI</title>
+    <style>
+        /* poppins-latin-400-normal */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 400;
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff2') format('woff2'), url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.woff') format('woff');
+            unicode-range: U+0 -00FF, U+131, U+152 -0153, U+2BB-02BC, U+2C6, U+2 DA, U+2 DC, U+304, U+308, U+329, U+2000 -206F, U+2074, U+20 AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* poppins-latin-500-normal */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 500;
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-500-normal.woff2') format('woff2'), url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-500-normal.woff') format('woff');
+            unicode-range: U+0 -00FF, U+131, U+152 -0153, U+2BB-02BC, U+2C6, U+2 DA, U+2 DC, U+304, U+308, U+329, U+2000 -206F, U+2074, U+20 AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* poppins-latin-600-normal */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 600;
+            src: url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-600-normal.woff2') format('woff2'), url('https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-600-normal.woff') format('woff');
+            unicode-range: U+0 -00FF, U+131, U+152 -0153, U+2BB-02BC, U+2C6, U+2 DA, U+2 DC, U+304, U+308, U+329, U+2000 -206F, U+2074, U+20 AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            position: relative;
+            height: 100dvh;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 200;
+            color: white;
+            margin: 0;
+        }
+
+        .details-table {
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .details-table tr td {
+            padding: 0px 0;
+            border-bottom: 1px solid #D0D0D0;
+        }
+
+        .details-table tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .subtitle {
+            margin: 0;
+            padding: 0;
+            color: #03194D;
+            font-weight: bold;
+            width: 20%;
+        }
+
+        .value {
+            width: 80%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .title {
+            background-color: #ed1b2f;
+            vertical-align: center;
+            padding-left: 10px;
+        }
+
+        .transactions-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .transactions-table th, .transactions-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .transactions-table th {
+            background-color: #ffffff;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    {# Start Company Data #}
+    <div>
+        <h1>Estado de Cuenta</h1>
+        <div class="title">
+            <h2>EMPRESA</h2>
+        </div>
+        <table class="details-table">
+            <tr>
+                <td class="subtitle">Razon Social:</td>
+                <td class="value">
+                    <b>{{ company.fiscalName }}</b>
+                </td>
+            </tr>
+            {% if type == 'company' %}
+                <tr>
+                    <td class="subtitle">Dirección:</td>
+                    <td class="value">
+                        <b>{{ company.postalAddress }}</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="subtitle">RFC:</td>
+                    <td class="value">
+                        <b>{{ company.rfc }}</b>
+                    </td>
+                </tr>
+            {% endif %}
+            <tr>
+                <td class="subtitle">Cuenta:</td>
+                <td class="value">
+                    <b>{{ company.bankAccount }}</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Institución:</td>
+                <td class="value">
+                    <b>STP</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {# End Company Data #}
+
+    {# Start Account Data #}
+    <div>
+        <div class="title">
+            <h2> RESUMEN DE CUENTA </h2>
+        </div>
+        <table class="details-table">
+            <tr>
+                <td class="subtitle">Saldo Inicial:</td>
+                <td class="value">
+                    <b>{{ accountSummary.openingBalance }}</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Abonos:</td>
+                <td class="value">
+                    <b>{{ accountSummary.credits }}</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Cargos:</td>
+                <td class="value">
+                    <b>-{{ accountSummary.charges }}</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Saldo Final:</td>
+                <td class="value">
+                    <b>{{ accountSummary.closingBalance }}</b>
+                </td>
+            </tr>
+            <tr>
+                <td class="subtitle">Periodo:</td>
+                <td class="value">
+                    <b>{{ date }}</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {# End Account Data #}
+
+    {# Start Transactions Data #}
+    <div style="margin-top: 10px">
+        <div class="title">
+            <h2>MOVIMIENTO DE LA CUENTA</h2>
+        </div>
+        <table class="transactions-table">
+            <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Descripción</th>
+                <th>Cargo</th>
+                <th>Abono</th>
+                <th>Saldo</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for transaction in transactions %}
+                <tr>
+                    <td>{{ transaction.liquidationDate }}</td>
+                    <td>{{ transaction.concept }}</td>
+                    {% if transaction.typeName == 'Entrada' %}
+                        <td>$0.00</td>
+                        <td>{{ transaction.amountMoneyFormat }}</td>
+                        <td>{{ transaction.destinationBalanceMoneyFormat }}</td>
+                    {% else %}
+                        <td style="white-space: nowrap">-{{ transaction.amountMoneyFormat }}</td>
+                        <td>$0.00</td>
+                        <td>{{ transaction.sourceBalanceMoneyFormat }}</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {# End Transactions Data #}
+
+</div>
+</body>
+
+</html>

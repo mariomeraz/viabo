@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\fundingOrder\domain\FundingOrderView" table="v_management_funding_orders">
+        <id name="id" column="Id"/>
+        <field name="referenceNumber" column="ReferenceNumber"/>
+        <field name="statusId" column="StatusId"/>
+        <field name="statusName" column="StatusName"/>
+        <field name="conciliation" column="Conciliation"/>
+        <field name="cardId" column="CardId"/>
+        <field name="cardNumber" column="CardNumber"/>
+        <field name="paymentProcessorName" column="PaymentProcessorName"/>
+        <field name="amount" column="Amount"/>
+        <field name="spei" column="SPEI"/>
+        <field name="referencePayCash" column="ReferencePayCash"/>
+        <field name="instructionsUrls" column="PayCashInstructionsUrls"/>
+        <field name="conciliationNumber" column="ConciliationNumber"/>
+        <field name="conciliationUserId" column="ConciliationUserId"/>
+        <field name="conciliationUserName" column="ConciliationUserName"/>
+        <field name="conciliationDate" column="ConciliationDate"/>
+        <field name="canceledByUserId" column="CanceledByUser"/>
+        <field name="canceledByUserName" column="CanceledByUserName"/>
+        <field name="cancellationDate" column="CancellationDate"/>
+        <field name="emails" column="Emails"/>
+        <field name="registerDate" column="RegisterDate"/>
+        <field name="active" column="Active"/>
+    </entity>
+
+</doctrine-mapping>

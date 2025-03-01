@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         backupGlobals="false"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutChangesToGlobalState="true"
+         beStrictAboutTestsThatDoNotTestAnything="false"
+         bootstrap="./apps/bootstrap.php"
+         colors="true"
+         processIsolation="false"
+         stopOnError="true"
+         stopOnFailure="true"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
+         stopOnRisky="true"
+         backupStaticProperties="false"
+    >
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak"/>
+        <env name="APP_ENV" value="test"/>
+    </php>
+    <testsuites>
+        <testsuite name="security">
+            <directory>./tests/security/src</directory>
+        </testsuite>
+        <testsuite name="shared">
+            <directory>./tests/shared</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

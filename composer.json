@@ -1,0 +1,50 @@
+{
+  "name": "vaibo/vaibo",
+  "description": "Sistema viabo",
+  "autoload": {
+    "psr-4": {
+      "Viabo\\": "src/",
+      "Viabo\\Backend\\": "apps/viabo/backend/src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Viabo\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "ext-openssl": "*",
+    "ext-curl": "*",
+    "ext-simplexml": "*",
+    "symfony/framework-bundle": "^6.2",
+    "symfony/dotenv": "^6.2",
+    "symfony/yaml": "^6.2",
+    "symfony/twig-bundle": "^6.2",
+    "symfony/mailer": "^6.2",
+    "symfony/google-mailer": "^6.2",
+    "symfony/messenger": "^6.2",
+    "doctrine/orm": "^2.14",
+    "lexik/jwt-authentication-bundle": "^2.17",
+    "lambdish/phunctional": "^2.1",
+    "ramsey/uuid": "^4.7",
+    "endroid/qr-code": "^4.8",
+    "picqer/php-barcode-generator": "^2.2",
+    "symfony/monolog-bundle": "^3.8",
+    "nelmio/api-doc-bundle": "^4.12",
+    "symfony/asset": "^6.3",
+    "scheb/2fa-google-authenticator" : "^7.2.0",
+    "knplabs/knp-snappy-bundle": "^1.10",
+    "phpoffice/phpspreadsheet": "^2.1.0"
+  },
+  "require-dev": {
+    "behat/behat": "^3.14",
+    "phpunit/phpunit": "^10.0",
+    "friends-of-behat/symfony-extension": "2.4",
+    "friends-of-behat/mink": "1.11",
+    "friends-of-behat/mink-extension": "2.7",
+    "behat/mink-browserkit-driver": "2.1",
+    "fakerphp/faker": "^1.21",
+    "mockery/mockery": "^1.6"
+  },
+  "config": {}
+}

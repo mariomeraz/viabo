@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\paymentProcessor\domain\PaymentProcessor" table="cat_payment_processors">
+        <embedded name="id" class="PaymentProcessorId" use-column-prefix="false"/>
+        <embedded name="name" class="PaymentProcessorName" use-column-prefix="false"/>
+        <embedded name="active" class="PaymentProcessorActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

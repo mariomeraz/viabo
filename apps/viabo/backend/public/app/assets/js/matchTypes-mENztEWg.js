@@ -1,0 +1,2 @@
+import{bd as a}from"./vendor-5lkxkETF.js";function l(n){const e=typeof n=="number",o=c(n);return(e||o&&n!=="")&&!isNaN(Number(n))}function c(n){return typeof n=="string"||n instanceof String}const f=(n,e,o,s)=>n.map((r,i)=>({value:t(r,e),label:t(r,o),isDisabled:t(r,s)==="0"||!1,index:i,...r})),t=(n,e)=>{if(!e)return n;const o=e.split(".");let s=n;for(const r of o)if(s&&s.hasOwnProperty(r))s=s[r];else return;return s},p=n=>a.isFunction(n);export{f as c,p as i,l as m};
+//# sourceMappingURL=matchTypes-mENztEWg.js.map

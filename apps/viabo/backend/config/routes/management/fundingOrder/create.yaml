@@ -1,0 +1,9 @@
+create-funding-order:
+  path: '/api/funding-order/new'
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrderCreatorController
+  methods: POST
+
+create-funding-order-by-slug:
+  path: '/api/slug/funding-order/new'
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrderCreatorBySlugController
+  methods: POST

@@ -1,0 +1,6 @@
+create-card-receipt:
+  path: '/api/card/add/receipt'
+  controller: Viabo\Backend\Controller\management\receipt\ReceiptCreatorController
+  methods: POST
+
+

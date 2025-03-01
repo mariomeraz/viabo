@@ -1,0 +1,4 @@
+find-google-authenticator-qr:
+  path: '/api/security/google-authenticator/qr'
+  controller: Viabo\Backend\Controller\security\authenticatorFactor\find\GoogleAuthenticatorQRCreatorController
+  methods: GET

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\management\commerceTerminal\domain\Terminal" table="t_management_commerces_terminals">
+        <id name="id" type="terminal_id" column="Id"/>
+        <field name="commerceId" type="terminal_commerce_id" column="CommerceId"/>
+        <embedded name="merchantId" class="TerminalMerchantId" use-column-prefix="false"/>
+        <embedded name="terminalId" class="TerminalValueId" use-column-prefix="false"/>
+        <embedded name="createdByUser" class="TerminalCreatedByUser" use-column-prefix="false"/>
+        <embedded name="apiData" class="TerminalApiData" use-column-prefix="false"/>
+        <embedded name="name" class="TerminalName" use-column-prefix="false"/>
+        <embedded name="speiCard" class="TerminalSpeiCard" use-column-prefix="false"/>
+        <embedded name="typeId" class="TerminalTypeId" use-column-prefix="false"/>
+        <embedded name="registerDate" class="TerminalRegisterDate" use-column-prefix="false"/>
+        <embedded name="active" class="TerminalActive" use-column-prefix="false"/>
+    </entity>
+
+</doctrine-mapping>

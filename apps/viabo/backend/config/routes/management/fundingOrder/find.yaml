@@ -1,0 +1,14 @@
+find-funding-order-by-reference-number:
+  path: "/orden-fondeo/{referenceNumber}"
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrderViewController
+  methods: GET
+
+find-funding-orders:
+  path: "/api/funding-orders"
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrdersFinderController
+  methods: GET
+
+find-funding-order:
+  path: "/api/funding-order/{fundingOrderId}"
+  controller: Viabo\Backend\Controller\management\fundingOrder\FundingOrderFinderController
+  methods: GET

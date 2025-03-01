@@ -1,0 +1,70 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+imports:
+  - { resource: ../../../../src/analytics/shared/infrastructure/symfony/dependencyInjection/analytics_database.yaml }
+  - { resource: ../../../../src/security/shared/infrastructure/symfony/dependencyInjection/security_database.yaml }
+  - { resource: ../../../../src/catalogs/shared/infrastructure/symfony/dependencyInjection/catalogs_database.yaml }
+  - { resource: ../../../../src/management/shared/infrastructure/symfony/dependencyInjection/management_database.yaml }
+  - { resource: ../../../../src/news/shared/infrastructure/symfony/dependencyInjection/news_database.yaml }
+  - { resource: ../../../../src/landingPages/shared/infrastructure/symfony/dependencyInjection/landingPages_database.yaml }
+  - { resource: ../../../../src/tickets/shared/infrastructure/symfony/dependencyInjection/tickets_database.yaml }
+  - { resource: ../../../../src/stp/shared/infrastructure/symfony/dependencyInjection/stp_database.yaml }
+  - { resource: ../../../../src/cardCloud/shared/infrastructure/symfony/dependencyInjection/card_cloud_database.yaml }
+  - { resource: ../../../../src/backoffice/shared/infrastructure/symfony/dependencyInjection/backoffice_database.yaml }
+  - { resource: ../../../../src/backofficeBusiness/shared/infrastructure/symfony/dependencyInjection/backoffice_business_database.yaml }
+
+services:
+  # default configuration for services in *this* file
+  _defaults:
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+  #Configure
+  _instanceof:
+    Viabo\shared\domain\bus\event\DomainEventSubscriber:
+      tags: [ 'domain_event_subscriber' ]
+
+    Viabo\shared\domain\bus\command\CommandHandler:
+      tags: [ 'viabo.command_handler' ]
+
+    Viabo\shared\domain\bus\query\queryHandler:
+      tags: [ 'viabo.query_handler' ]
+
+  # Wire
+  Viabo\:
+    resource: '../../../../src'
+
+  Viabo\Backend\Controller\:
+    resource: '../src/Controller'
+    tags: [ 'controller.service_arguments' ]
+
+  # TAGGING
+  Viabo\shared\infrastructure\bus\event\DomainEventMapping:
+    arguments: [ !tagged domain_event_subscriber ]
+    lazy: true
+
+  Viabo\shared\infrastructure\bus\event\inMemory\InMemorySymfonyEventBus:
+    arguments: [ !tagged domain_event_subscriber ]
+    lazy: true
+
+  Viabo\shared\infrastructure\doctrine\DatabaseConnections:
+    arguments: [ !tagged database_connection ]
+
+  # -- APP DEFINITIONS --
+  # Command/Query Handlers
+  Viabo\shared\infrastructure\bus\command\InMemorySymfonyCommandBus:
+    arguments: [ !tagged viabo.command_handler ]
+
+  Viabo\shared\infrastructure\bus\query\InMemorySymfonyQueryBus:
+    arguments: [ !tagged viabo.query_handler ]
+
+  # -- IMPLEMENTATIONS SELECTOR --
+  Viabo\shared\domain\bus\event\EventBus: '@Viabo\shared\infrastructure\bus\event\DomainEventMapping'
+
+#
+#  viabo.user_authenticator:
+#    class: Viabo\shared\infrastructure\symfony\security\UserAuthenticator
+#    parent: lexik_jwt_authentication.security.jwt_authenticator

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Viabo\security\user\domain\UserView" read-only="true" table="v_users">
+        <id name="id" column="Id"/>
+        <field name="profileId" column="ProfileId"/>
+        <field name="name" column="Name"/>
+        <field name="lastname" column="Lastname"/>
+        <field name="phone" column="Phone"/>
+        <field name="email" column="Email"/>
+        <field name="password" column="Password"/>
+        <field name="register" column="Register"/>
+        <field name="active" column="Active"/>
+        <field name="profileName" column="ProfileName"/>
+        <field name="businessId" column="BusinessId"/>
+        <field name="permissionModules" column="PermissionModules"/>
+        <field name="actionsModules" column="ActionsModules"/>
+        <field name="urlInit" column="UrlInit"/>
+    </entity>
+
+</doctrine-mapping>

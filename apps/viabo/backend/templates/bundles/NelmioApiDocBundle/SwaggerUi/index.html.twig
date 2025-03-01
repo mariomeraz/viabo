@@ -1,0 +1,26 @@
+{% extends '@!NelmioApiDoc/SwaggerUi/index.html.twig' %}
+
+{% block meta %}
+	<meta charset="UTF-8">
+	<link href="/bundles/nelmioapidoc/favicon-set.png" rel="icon" type="image/png"/>
+
+{% endblock meta %}
+
+{# Import your own stylesheet #}
+{% block stylesheets %}
+	{{ parent() }}
+
+	{{ nelmioAsset('/bundles/nelmioapidoc', 'style.css') }}
+
+{% endblock stylesheets %}
+
+
+{% block header_block %}
+	<header>
+		{% block header %}
+			<a id="logo" href="https://set.lat/" target="_blank">
+				<img lazy decoding="async" src="/bundles/nelmioapidoc/logo-set.webp" alt="SET - Soluciones Electrónicas Transaccionales API">
+			</a>
+		{% endblock header %}
+	</header>
+{% endblock header_block %}
