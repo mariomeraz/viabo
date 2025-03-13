@@ -117,3 +117,8 @@ support-incidences:
   path: "/support/incidences"
   controller: Viabo\Backend\Controller\RoutesFrontendController
   methods: GET
+
+external_data:
+    path: /api/external-data
+    controller: Viabo\Backend\Controller\ExternalApiController::fetchExternalData
+    methods: GET

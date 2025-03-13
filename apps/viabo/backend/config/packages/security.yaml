@@ -30,7 +30,7 @@ security:
 #        - { path: ^/api/, roles: IS_AUTHENTICATED_FULLY }
 
 # Temporal
-    enable_authenticator_manager: true
+    #enable_authenticator_manager: true
     providers:
         users_in_memory: { memory: null }
 
@@ -43,6 +43,7 @@ security:
             provider: users_in_memory
 
     access_control:
+    - { path: ^/api/, roles: PUBLIC_ACCESS }
     # - { path: ^/admin, roles: ROLE_ADMIN }
     # - { path: ^/profile, roles: ROLE_USER }
 

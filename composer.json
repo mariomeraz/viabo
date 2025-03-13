@@ -34,7 +34,8 @@
     "symfony/asset": "^6.3",
     "scheb/2fa-google-authenticator" : "^7.2.0",
     "knplabs/knp-snappy-bundle": "^1.10",
-    "phpoffice/phpspreadsheet": "^2.1.0"
+    "phpoffice/phpspreadsheet": "^2.1.0",
+    "symfony/http-client": "^7.2"
   },
   "require-dev": {
     "behat/behat": "^3.14",
